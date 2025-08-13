@@ -1,6 +1,7 @@
-<!-- resources/views/silenthill.blade.php -->
+<!-- resources/views/welcome.blade.php -->
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,7 +10,7 @@
     <style>
         body {
             margin: 0;
-            background: #111;
+            background: #000;
             font-family: 'Montserrat', sans-serif;
             color: white;
             overflow-x: hidden;
@@ -19,23 +20,29 @@
         .bg {
             position: fixed;
             inset: 0;
-            background: url('silenthill_bg.jpg') no-repeat center/cover;
-            filter: brightness(0.3) contrast(1.1);
+            background: url('residentevil.jpeg') no-repeat center/cover;
+            filter: brightness(0.3);
             z-index: -2;
         }
 
-        /* Efek kabut tebal */
+        /* Efek kabut */
         .fog {
             position: fixed;
             inset: 0;
-            background: url('fog-thick.png') repeat-x;
-            opacity: 0.4;
-            animation: fogMove 100s linear infinite;
+            background: url('residentevil.jpeg') repeat-x;
+            opacity: 0.3;
+            animation: fogMove 60s linear infinite;
             z-index: -1;
         }
+
         @keyframes fogMove {
-            0% { background-position: 0 0; }
-            100% { background-position: 150% 0; }
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
         }
 
         /* Hero section */
@@ -46,40 +53,36 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
         }
+
         h1 {
             font-family: 'Cinzel Decorative', serif;
-            font-size: 4.5rem;
-            color: #a52a2a;
-            text-shadow: 0 0 25px #a52a2a, 0 0 50px #800000;
+            font-size: 4rem;
+            color: #ff0000;
+            text-shadow: 0 0 20px red, 0 0 40px darkred;
             margin-bottom: 15px;
-            animation: titleGlow 3s infinite alternate;
-        }
-        @keyframes titleGlow {
-            0% { text-shadow: 0 0 25px #a52a2a, 0 0 50px #800000; }
-            100% { text-shadow: 0 0 40px #800000, 0 0 80px #b22222; }
+            animation: redGlow 2s infinite, fadeInUp 1.2s ease-out forwards, shake 3s infinite;
         }
 
         p {
             font-size: 1.3rem;
-            max-width: 650px;
-            color: #ddd;
-            margin-bottom: 15px;
+            max-width: 600px;
         }
-        a {
+
+        a.button {
             display: inline-block;
             margin-top: 20px;
             padding: 12px 30px;
-            background: #800000;
+            background: darkred;
             color: white;
             font-weight: bold;
             border-radius: 5px;
             text-decoration: none;
             transition: 0.3s;
         }
-        a:hover {
-            background: #b22222;
+
+        a.button:hover {
+            background: red;
             transform: scale(1.05);
         }
 
@@ -91,33 +94,125 @@
             padding: 50px;
             background: rgba(0, 0, 0, 0.85);
         }
+
+        /* Jadikan game card sebagai link */
         .game-card {
-            background: #222;
+            background: #111;
             border-radius: 10px;
             overflow: hidden;
             text-align: center;
-            border: 1px solid rgba(139, 0, 0, 0.6);
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
+
+            /* Supaya elemen a tetap blok dan vertical */
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
         }
+
         .game-card img {
             width: 100%;
             height: 300px;
             object-fit: cover;
             display: block;
+            filter: brightness(0.9);
+            transition: filter 0.3s ease;
         }
+
         .game-card h3 {
             padding: 15px;
             font-size: 1.1rem;
-            background: #111;
-            color: #f5f5f5;
+            background: #000;
+            margin: 0;
         }
+
         .game-card:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px #b22222;
+            box-shadow: 0 0 20px red;
+        }
+
+        .game-card:hover img {
+            filter: brightness(1);
+        }
+
+        /* Animasi glow merah */
+        @keyframes redGlow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 20px red, 0 0 40px darkred;
+            }
+
+            50% {
+                text-shadow: 0 0 40px crimson, 0 0 80px red;
+            }
+        }
+
+        /* Animasi getar */
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            20% {
+                transform: translate(-2px, 1px);
+            }
+
+            40% {
+                transform: translate(2px, -1px);
+            }
+
+            60% {
+                transform: translate(-1px, 2px);
+            }
+
+            80% {
+                transform: translate(1px, -2px);
+            }
+        }
+
+        /* Animasi fade-in masuk */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Efek darah menetes (partikel) */
+        .blood-particle {
+            position: fixed;
+            top: -20px;
+            width: 10px;
+            height: 10px;
+            background: darkred;
+            border-radius: 50%;
+            animation: bloodFall linear infinite;
+            z-index: 1;
+            opacity: 0.7;
+        }
+
+        @keyframes bloodFall {
+            to {
+                transform: translateY(110vh) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
+
 <body>
 
     <div class="bg"></div>
@@ -126,32 +221,44 @@
     <section class="hero">
         <h1>Silent Hill</h1>
         <p>Masuki kota kabut penuh misteri dan kengerian. Dari petualangan pertama hingga cerita kelam terbaru, hadapi ketakutan terdalammu.</p>
-        <a href="#list">Lihat Semua Seri</a>
+        <a href="#list" class="button">Lihat Semua Seri</a>
     </section>
 
     <section id="list" class="game-grid">
-        <!-- Daftar Game -->
-        <div class="game-card">
+        <!-- Daftar Game dengan link -->
+        <a href="/silent-hill-1" class="game-card">
             <img src="sh1.jpg" alt="Silent Hill 1" />
             <h3>Silent Hill</h3>
-        </div>
-        <div class="game-card">
+        </a>
+        <a href="/silent-hill-2" class="game-card">
             <img src="sh2.jpg" alt="Silent Hill 2" />
             <h3>Silent Hill 2</h3>
-        </div>
-        <div class="game-card">
+        </a>
+        <a href="/silent-hill-3" class="game-card">
             <img src="sh3.jpg" alt="Silent Hill 3" />
             <h3>Silent Hill 3</h3>
-        </div>
-        <div class="game-card">
+        </a>
+        <a href="/silent-hill-4" class="game-card">
             <img src="sh4.jpg" alt="Silent Hill 4" />
             <h3>Silent Hill 4: The Room</h3>
-        </div>
-        <div class="game-card">
+        </a>
+        <a href="/silent-hill-origins" class="game-card">
             <img src="shorigin.jpg" alt="Silent Hill Origins" />
             <h3>Silent Hill: Origins</h3>
-        </div>
+        </a>
     </section>
 
+    <script>
+        // Buat 20 partikel darah jatuh acak
+        for (let i = 0; i < 20; i++) {
+            const blood = document.createElement("div");
+            blood.classList.add("blood-particle");
+            blood.style.left = Math.random() * 100 + "vw";
+            blood.style.animationDuration = (3 + Math.random() * 5) + "s";
+            document.body.appendChild(blood);
+        }
+    </script>
+
 </body>
+
 </html>
