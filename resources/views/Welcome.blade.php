@@ -279,10 +279,10 @@
     <!-- Game List -->
     <section id="list" class="game-grid">
         @foreach ([
-            ['0.png','Resident Evil 0','/Residentdetail'],
-            ['1.png','Resident Evil','/resident-evil-1'],
-            ['code.png','Resident Evil Code: Veronica','/resident-evil-code-veronica'],
-            ['2.png','Resident Evil 2','/resident-evil-2'],
+            ['0.png','Resident Evil 0','/residentevil0'],
+            ['1.png','Resident Evil','/residentevil1'],
+            ['code.png','Resident Evil Code: Veronica','/residentevilcodeveronica'],
+            ['2.png','Resident Evil 2','/residentevil2'],
             ['3.png','Resident Evil 3','/resident-evil-3'],
             ['4.png','Resident Evil 4','/resident-evil-4'],
             ['5.png','Resident Evil 5','/resident-evil-5'],
