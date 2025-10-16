@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resident Evil — Horror Library</title>
+  <title>Resident Evil Library</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 
@@ -16,28 +16,30 @@
       overflow-x: hidden;
     }
 
-    /* Background & fog */
+    /* Background & Fog */
     .bg {
       position: fixed;
       inset: 0;
       background: url('residentevil.jpeg') no-repeat center/cover;
-      filter: brightness(0.3);
+      filter: brightness(0.25);
       z-index: -2;
     }
+
     .fog {
       position: fixed;
       inset: 0;
-      background: url('residentevil.jpeg') repeat-x;
+      background: url('residentevil.jpeg');
       opacity: 0.3;
-      animation: fogMove 60s linear infinite;
+      animation: fogMove 90s linear infinite;
       z-index: -1;
     }
+
     @keyframes fogMove {
       from { background-position: 0 0; }
       to { background-position: 200% 0; }
     }
 
-    /* Hero section */
+    /* Hero Section */
     .hero {
       height: 100vh;
       display: flex;
@@ -45,189 +47,229 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3), #000);
     }
+
     h1 {
       font-family: 'Cinzel Decorative', serif;
       font-size: 4rem;
-      color: #ff0000;
-      text-shadow: 0 0 20px red, 0 0 40px darkred;
-      animation: redGlow 2s infinite, fadeInUp 1.2s ease-out forwards;
+      color: #ff1c1c;
+      letter-spacing: 2px;
+      text-shadow: 0 0 25px red, 0 0 50px darkred;
+      animation: fadeInUp 1.2s ease-out forwards;
     }
-    @keyframes redGlow {
-      0%,100% { text-shadow: 0 0 20px red, 0 0 40px darkred; }
-      50% { text-shadow: 0 0 50px crimson, 0 0 100px red; }
-    }
+
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
+      from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    p { font-size: 1.3rem; max-width: 600px; }
-    a.button {
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
       margin-top: 20px;
-      padding: 12px 30px;
-      background: darkred;
-      color: white;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    a.button:hover {
-      background: red;
-      transform: scale(1.05);
+      color: #ccc;
     }
 
-    /* Section Tabs */
+    a.button {
+      margin-top: 30px;
+      padding: 12px 40px;
+      background: linear-gradient(90deg, #900 0%, #c00 100%);
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      letter-spacing: 1px;
+      box-shadow: 0 0 20px #700;
+      transition: 0.3s;
+    }
+
+    a.button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #f00;
+    }
+
+    /* Tabs */
     .tabs {
       display: flex;
       justify-content: center;
-      margin: 30px 0;
       gap: 20px;
+      margin: 50px 0 20px;
     }
+
     .tab-btn {
-      padding: 12px 25px;
+      padding: 14px 35px;
       background: #111;
-      color: #ff4444;
-      border: 1px solid #ff0000;
+      color: #aaa;
+      border: 2px solid #440000;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.1rem;
       border-radius: 8px;
       cursor: pointer;
       transition: 0.3s;
     }
-    .tab-btn.active, .tab-btn:hover {
-      background: red;
-      color: white;
+
+    .tab-btn:hover {
+      color: #fff;
+      border-color: #b00;
     }
 
-    /* Book Grid */
+    .tab-btn.active {
+      color: #fff;
+      background: linear-gradient(90deg, #700, #b00);
+      border-color: #c00;
+      box-shadow: 0 0 15px red;
+    }
+
+    /* Books Grid */
     .book-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 30px;
       padding: 40px;
-      transition: all 0.5s ease;
+      transition: opacity 0.5s ease;
     }
 
     .book {
-      background: linear-gradient(180deg, #111 0%, #000 100%);
-      border: 2px solid #330000;
+      background: #0b0b0b;
+      border: 1px solid #440000;
       border-radius: 10px;
       overflow: hidden;
       text-align: center;
-      cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
-      position: relative;
     }
 
     .book img {
       width: 100%;
-      height: 300px;
+      height: 320px;
       object-fit: cover;
       transition: all 0.3s ease;
+      filter: brightness(0.85);
     }
 
     .book h3 {
       font-family: 'Cinzel Decorative', serif;
-      padding: 15px;
+      font-size: 1.1rem;
       background: #000;
-      color: #ff5555;
+      color: #ff4444;
+      padding: 15px;
       margin: 0;
     }
 
     .book:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 25px red;
-    }
-
-    .book:active {
-      transform: scale(0.97);
+      box-shadow: 0 0 25px #900;
     }
 
     /* Character Grid */
     .character-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 30px;
       padding: 40px;
+      transition: opacity 0.5s ease;
     }
 
     .character-card {
-      background: #111;
+      background: #0b0b0b;
       border-radius: 10px;
+      border: 1px solid #440000;
       overflow: hidden;
-      box-shadow: 0 0 15px rgba(255,0,0,0.4);
       text-align: center;
       cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
     }
+
+    .character-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-bottom: 2px solid #a00;
+    }
+
+    .character-card h3 {
+      font-family: 'Cinzel Decorative', serif;
+      color: #ff5555;
+      padding: 15px;
+    }
+
     .character-card:hover {
       transform: scale(1.05);
       box-shadow: 0 0 25px red;
-    }
-    .character-card img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      border-bottom: 2px solid red;
-    }
-    .character-card h3 {
-      color: #ff4444;
-      font-family: 'Cinzel Decorative', serif;
-      margin: 15px 0 10px;
     }
 
     /* Modal */
     .modal {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      inset: 0;
       background: rgba(0,0,0,0.9);
       display: none;
       align-items: center;
       justify-content: center;
       z-index: 1000;
-      animation: fadeIn 0.4s ease;
     }
+
     .modal.active {
       display: flex;
+      animation: fadeIn 0.4s ease;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     .modal-content {
       background: #111;
-      border: 2px solid red;
+      border: 2px solid #b00;
       border-radius: 10px;
       max-width: 600px;
-      text-align: center;
       padding: 30px;
+      text-align: center;
+      box-shadow: 0 0 40px #a00;
       animation: zoomIn 0.4s ease;
     }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.7); }
+      to { transform: scale(1); }
+    }
+
     .modal-content img {
       width: 250px;
       height: 250px;
-      border-radius: 10px;
       object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #600;
     }
+
     .modal-content h2 {
       color: #ff3333;
       font-family: 'Cinzel Decorative', serif;
       margin-top: 15px;
     }
+
     .modal-content p {
       color: #ccc;
       margin-top: 10px;
     }
+
     .close-btn {
-      background: red;
+      background: linear-gradient(90deg, #700, #a00);
       border: none;
-      padding: 10px 20px;
+      padding: 10px 25px;
       color: white;
       font-weight: bold;
       border-radius: 8px;
       cursor: pointer;
-      margin-top: 15px;
+      margin-top: 20px;
+      transition: 0.3s;
     }
 
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes zoomIn { from { transform: scale(0.7); } to { transform: scale(1); } }
+    .close-btn:hover {
+      background: red;
+      box-shadow: 0 0 20px red;
+    }
   </style>
 </head>
 <body>
@@ -236,15 +278,16 @@
 
   <section class="hero">
     <h1>Resident Evil Library</h1>
-    <p>Pilih koleksi buku atau karakter favoritmu dan temukan kisah mengerikan di baliknya.</p>
-    <a href="#content" class="button">Masuk ke Perpustakaan</a>
+    <p>Jelajahi kisah-kisah mengerikan dan karakter legendaris dalam dunia Resident Evil.</p>
+    <a href="#content" class="button">Masuk ke Koleksi</a>
   </section>
 
   <!-- Tabs -->
   <div id="content" class="tabs">
-    <button class="tab-btn active" data-tab="books">📚 Koleksi Buku</button>
-    <button class="tab-btn" data-tab="characters">🧍 Karakter</button>
+    <button class="tab-btn active" data-tab="books">Koleksi Buku</button>
+    <button class="tab-btn" data-tab="characters">Karakter</button>
   </div>
+
   <!-- Books -->
   <section id="books" class="book-grid">
     @foreach ([
@@ -269,11 +312,11 @@
   <!-- Characters -->
   <section id="characters" class="character-grid" style="display:none;">
     @foreach ([
-      ['chris.jpg','Chris Redfield',"Anggota S.T.A.R.S. yang kuat dan pemberani, dikenal karena keteguhannya melawan bio-organik."],
-      ['leon.jpg','Leon Kennedy',"Agen pemerintah berpengalaman dengan keberanian luar biasa di tengah wabah mematikan."],
-      ['jill.jpg','Jill Valentine',"Ahli membuka kunci dan strategi bertahan hidup dari tim S.T.A.R.S."],
-      ['ada.jpg','Ada Wong',"Mata-mata misterius yang cerdik dan licik, sering muncul dengan tujuan rahasia."],
-      ['claire.jpg','Claire Redfield',"Saudari Chris Redfield yang gigih dan berani mencari kebenaran di balik kekacauan."]
+      ['chris.jpg','Chris Redfield',"Anggota S.T.A.R.S. yang kuat dan pemberani."],
+      ['leon.jpg','Leon Kennedy',"Agen pemerintah berani di tengah wabah mematikan."],
+      ['jill.jpg','Jill Valentine',"Ahli strategi bertahan hidup dari tim S.T.A.R.S."],
+      ['ada.jpg','Ada Wong',"Mata-mata misterius dengan tujuan tersembunyi."],
+      ['claire.jpg','Claire Redfield',"Saudari Chris Redfield yang gigih dan pemberani."]
     ] as [$img, $name, $desc])
       <div class="character-card" data-name="{{ $name }}" data-img="{{ $img }}" data-desc="{{ $desc }}">
         <img src="{{ $img }}" alt="{{ $name }}">
@@ -299,6 +342,7 @@
       books: document.getElementById("books"),
       characters: document.getElementById("characters"),
     };
+
     tabs.forEach(btn => {
       btn.addEventListener("click", () => {
         tabs.forEach(b => b.classList.remove("active"));
@@ -309,7 +353,7 @@
       });
     });
 
-    // Character modal
+    // Modal
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("modal-img");
     const modalName = document.getElementById("modal-name");
@@ -324,6 +368,7 @@
         modalDesc.textContent = card.dataset.desc;
       });
     });
+
     closeBtn.addEventListener("click", () => modal.classList.remove("active"));
   </script>
 </body>
