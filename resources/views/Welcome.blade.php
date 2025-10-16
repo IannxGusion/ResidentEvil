@@ -1,321 +1,330 @@
-<!-- resources/views/welcome.blade.php -->
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Resident Evil — Welcome</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resident Evil — Horror Library</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 
-    <style>
-        body {
-            margin: 0;
-            background: #000;
-            font-family: 'Montserrat', sans-serif;
-            color: white;
-            overflow-x: hidden;
-        }
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
 
-        /* Background */
-        .bg {
-            position: fixed;
-            inset: 0;
-            background: url('residentevil.jpeg') no-repeat center/cover;
-            filter: brightness(0.3);
-            z-index: -2;
-        }
+    /* Background & fog */
+    .bg {
+      position: fixed;
+      inset: 0;
+      background: url('residentevil.jpeg') no-repeat center/cover;
+      filter: brightness(0.3);
+      z-index: -2;
+    }
+    .fog {
+      position: fixed;
+      inset: 0;
+      background: url('residentevil.jpeg') repeat-x;
+      opacity: 0.3;
+      animation: fogMove 60s linear infinite;
+      z-index: -1;
+    }
+    @keyframes fogMove {
+      from { background-position: 0 0; }
+      to { background-position: 200% 0; }
+    }
 
-        /* Fog effect */
-        .fog {
-            position: fixed;
-            inset: 0;
-            background: url('residentevil.jpeg') repeat-x;
-            opacity: 0.3;
-            animation: fogMove 60s linear infinite;
-            z-index: -1;
-        }
+    /* Hero section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 4rem;
+      color: #ff0000;
+      text-shadow: 0 0 20px red, 0 0 40px darkred;
+      animation: redGlow 2s infinite, fadeInUp 1.2s ease-out forwards;
+    }
+    @keyframes redGlow {
+      0%,100% { text-shadow: 0 0 20px red, 0 0 40px darkred; }
+      50% { text-shadow: 0 0 50px crimson, 0 0 100px red; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        @keyframes fogMove {
-            from { background-position: 0 0; }
-            to { background-position: 200% 0; }
-        }
+    p { font-size: 1.3rem; max-width: 600px; }
+    a.button {
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: darkred;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    a.button:hover {
+      background: red;
+      transform: scale(1.05);
+    }
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+    /* Section Tabs */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+      gap: 20px;
+    }
+    .tab-btn {
+      padding: 12px 25px;
+      background: #111;
+      color: #ff4444;
+      border: 1px solid #ff0000;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .tab-btn.active, .tab-btn:hover {
+      background: red;
+      color: white;
+    }
 
-        h1 {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 4rem;
-            color: #ff0000;
-            text-shadow: 0 0 20px red, 0 0 40px darkred;
-            margin-bottom: 15px;
-            animation: redGlow 2s infinite, fadeInUp 1.2s ease-out forwards, shake 3s infinite;
-        }
+    /* Book Grid */
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      transition: all 0.5s ease;
+    }
 
-        p {
-            font-size: 1.3rem;
-            max-width: 600px;
-        }
+    .book {
+      background: linear-gradient(180deg, #111 0%, #000 100%);
+      border: 2px solid #330000;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
 
-        a.button {
-            margin-top: 20px;
-            padding: 12px 30px;
-            background: darkred;
-            color: white;
-            font-weight: bold;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+    .book img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
 
-        a.button:hover {
-            background: red;
-            transform: scale(1.05);
-        }
+    .book h3 {
+      font-family: 'Cinzel Decorative', serif;
+      padding: 15px;
+      background: #000;
+      color: #ff5555;
+      margin: 0;
+    }
 
-        /* Game List Grid */
-        .game-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 50px;
-            background: rgba(0, 0, 0, 0.85);
-        }
+    .book:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px red;
+    }
 
-        .game-card {
-            background: #111;
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            color: white;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-        }
+    .book:active {
+      transform: scale(0.97);
+    }
 
-        .game-card img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 10px 10px 0 0;
-            transition: filter 0.3s ease;
-        }
+    /* Character Grid */
+    .character-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
 
-        .game-card h3 {
-            padding: 15px;
-            font-size: 1.1rem;
-            background: #000;
-            margin: 0;
-        }
+    .character-card {
+      background: #111;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255,0,0,0.4);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .character-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px red;
+    }
+    .character-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-bottom: 2px solid red;
+    }
+    .character-card h3 {
+      color: #ff4444;
+      font-family: 'Cinzel Decorative', serif;
+      margin: 15px 0 10px;
+    }
 
-        .game-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px red;
-        }
+    /* Modal */
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      animation: fadeIn 0.4s ease;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal-content {
+      background: #111;
+      border: 2px solid red;
+      border-radius: 10px;
+      max-width: 600px;
+      text-align: center;
+      padding: 30px;
+      animation: zoomIn 0.4s ease;
+    }
+    .modal-content img {
+      width: 250px;
+      height: 250px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .modal-content h2 {
+      color: #ff3333;
+      font-family: 'Cinzel Decorative', serif;
+      margin-top: 15px;
+    }
+    .modal-content p {
+      color: #ccc;
+      margin-top: 10px;
+    }
+    .close-btn {
+      background: red;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
 
-        .game-card:hover img {
-            filter: brightness(0.9);
-        }
-
-        /* Animations */
-        @keyframes redGlow {
-            0%, 100% { text-shadow: 0 0 20px red, 0 0 40px darkred; }
-            50% { text-shadow: 0 0 40px crimson, 0 0 80px red; }
-        }
-
-        @keyframes shake {
-            0%, 100% { transform: translate(0, 0); }
-            20% { transform: translate(-2px, 1px); }
-            40% { transform: translate(2px, -1px); }
-            60% { transform: translate(-1px, 2px); }
-            80% { transform: translate(1px, -2px); }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Slider */
-        .container {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            max-width: 1000px;
-            width: 100%;
-            padding: 20px;
-            margin: auto;
-        }
-
-        .slider {
-            position: relative;
-            width: 400px;
-            height: 500px;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255,0,0,0.5);
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 100%;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transform: scale(0.9) rotateY(15deg);
-            transition: all 0.7s ease;
-        }
-
-        .slide.active {
-            left: 0;
-            opacity: 1;
-            transform: scale(1) rotateY(0deg);
-            z-index: 1;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Navigation Arrows */
-        .nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255,0,0,0.6);
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            color: white;
-            font-size: 20px;
-            z-index: 10;
-            border-radius: 50%;
-            transition: background 0.3s;
-        }
-
-        .nav:hover {
-            background: rgba(255,0,0,0.9);
-        }
-
-        .nav.left { left: 10px; }
-        .nav.right { right: 10px; }
-
-        /* Character Details */
-        .details { flex: 1; }
-        .details h2 { margin-top: 0; color: #ff3333; }
-        .details p { line-height: 1.5; font-size: 16px; color: #ccc; }
-        .character-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    padding: 40px;
-    background: rgba(0,0,0,0.85);
-}
-
-.character-card {
-    background: #111;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 15px rgba(255,0,0,0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-.character-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-bottom: 2px solid red;
-}
-
-.character-card h3 {
-    color: #ff3333;
-    font-family: 'Cinzel Decorative', serif;
-    margin: 15px 0 10px;
-}
-
-.character-card p {
-    color: #ccc;
-    font-size: 0.95rem;
-    padding: 0 15px;
-    line-height: 1.4;
-}
-
-.character-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px red;
-}
-    </style>
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes zoomIn { from { transform: scale(0.7); } to { transform: scale(1); } }
+  </style>
 </head>
-
 <body>
+  <div class="bg"></div>
+  <div class="fog"></div>
 
-    <div class="bg"></div>
-    <div class="fog"></div>
+  <section class="hero">
+    <h1>Resident Evil Library</h1>
+    <p>Pilih koleksi buku atau karakter favoritmu dan temukan kisah mengerikan di baliknya.</p>
+    <a href="#content" class="button">Masuk ke Perpustakaan</a>
+  </section>
 
-    <!-- Hero -->
-    <section class="hero">
-        <h1>Resident Evil</h1>
-        <p>Selamat datang di dunia kengerian. Dari Resident Evil 0 hingga terbaru, siapkah kamu bertahan hidup?</p>
-        <a href="#list" class="button">Lihat Semua Seri</a>
-    </section>
-
-    <!-- Game List -->
-    <section id="list" class="game-grid">
-        @foreach ([
-            ['0.png','Resident Evil 0','/residentevil0'],
-            ['1.png','Resident Evil','/residentevil1'],
-            ['code.png','Resident Evil Code: Veronica','/residentevilcodeveronica'],
-            ['2.png','Resident Evil 2','/residentevil2'],
-            ['3.png','Resident Evil 3','/resident-evil-3'],
-            ['4.png','Resident Evil 4','/resident-evil-4'],
-            ['5.png','Resident Evil 5','/resident-evil-5'],
-            ['revelations.png','Resident Evil Revelations','/resident-evil-revelations'],
-            ['6.png','Resident Evil 6','/resident-evil-6'],
-            ['7.png','Resident Evil 7: Biohazard','/resident-evil-7'],
-            ['8.png','Resident Evil Village','/resident-evil-village'],
-            ['requiem.png','Resident Evil Requiem','/resident-evil-requiem'],
-        ] as [$img, $title, $link])
-            <a href="{{ $link }}" class="game-card">
-                <img src="{{ $img }}" alt="{{ $title }}">
-                <h3>{{ $title }}</h3>
-            </a>
-        @endforeach
-    </section>
-
-    <div class="character-grid">
+  <!-- Tabs -->
+  <div id="content" class="tabs">
+    <button class="tab-btn active" data-tab="books">📚 Koleksi Buku</button>
+    <button class="tab-btn" data-tab="characters">🧍 Karakter</button>
+  </div>
+  <!-- Books -->
+  <section id="books" class="book-grid">
     @foreach ([
-        ['chris.jpg','Chris Redfield',"Chris Redfield adalah anggota S.T.A.R.S. yang handal dan berani, dikenal dengan kekuatan dan kemampuannya melawan zombie dan bio-organik."],
-        ['leon.jpg','Leon Kennedy',"Leon Kennedy adalah agen pemerintah yang profesional dan ahli dalam menghadapi situasi berbahaya dan wabah virus di Raccoon City."],
-        ['jill.jpg','Jill Valentine',"Jill Valentine adalah anggota S.T.A.R.S. dan ahli membuka kunci, dikenal karena kecerdikan dan kemampuannya bertahan hidup."],
-        ['ada.jpg','Ada Wong',"Ada Wong adalah wanita misterius yang cerdik dan penuh intrik, sering muncul sebagai mata-mata dalam kisah Resident Evil."],
-        ['claire.jpg','Claire Redfield',"Claire Redfield adalah saudari Chris yang pemberani, berusaha mencari saudaranya sekaligus melawan kekacauan zombie."]
-    ] as [$img, $name, $desc])
-        <div class="character-card">
-            <img src="{{ $img }}" alt="{{ $name }}">
-            <h3>{{ $name }}</h3>
-            <p>{{ $desc }}</p>
-        </div>
+      ['0.png','Resident Evil 0','/residentevil0'],
+      ['1.png','Resident Evil 1','/residentevil1'],
+      ['2.png','Resident Evil 2','/residentevil2'],
+      ['3.png','Resident Evil 3','/residentevil3'],
+      ['4.png','Resident Evil 4','/residentevil4'],
+      ['5.png','Resident Evil 5','/residentevil5'],
+      ['6.png','Resident Evil 6','/residentevil6'],
+      ['7.png','Resident Evil 7','/residentevil7'],
+      ['8.png','Resident Evil Village','/residentevil8'],
+      ['9.png','Resident Evil 9','/residentevil9']
+    ] as [$img, $title, $link])
+      <a href="{{ $link }}" class="book">
+        <img src="{{ $img }}" alt="{{ $title }}">
+        <h3>{{ $title }}</h3>
+      </a>
     @endforeach
-</div>
+  </section>
 
+  <!-- Characters -->
+  <section id="characters" class="character-grid" style="display:none;">
+    @foreach ([
+      ['chris.jpg','Chris Redfield',"Anggota S.T.A.R.S. yang kuat dan pemberani, dikenal karena keteguhannya melawan bio-organik."],
+      ['leon.jpg','Leon Kennedy',"Agen pemerintah berpengalaman dengan keberanian luar biasa di tengah wabah mematikan."],
+      ['jill.jpg','Jill Valentine',"Ahli membuka kunci dan strategi bertahan hidup dari tim S.T.A.R.S."],
+      ['ada.jpg','Ada Wong',"Mata-mata misterius yang cerdik dan licik, sering muncul dengan tujuan rahasia."],
+      ['claire.jpg','Claire Redfield',"Saudari Chris Redfield yang gigih dan berani mencari kebenaran di balik kekacauan."]
+    ] as [$img, $name, $desc])
+      <div class="character-card" data-name="{{ $name }}" data-img="{{ $img }}" data-desc="{{ $desc }}">
+        <img src="{{ $img }}" alt="{{ $name }}">
+        <h3>{{ $name }}</h3>
+      </div>
+    @endforeach
+  </section>
 
-    </script>
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <img id="modal-img" src="" alt="">
+      <h2 id="modal-name"></h2>
+      <p id="modal-desc"></p>
+      <button class="close-btn">Tutup</button>
+    </div>
+  </div>
+
+  <script>
+    // Tab toggle
+    const tabs = document.querySelectorAll(".tab-btn");
+    const sections = {
+      books: document.getElementById("books"),
+      characters: document.getElementById("characters"),
+    };
+    tabs.forEach(btn => {
+      btn.addEventListener("click", () => {
+        tabs.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        for (const [key, section] of Object.entries(sections)) {
+          section.style.display = key === btn.dataset.tab ? "grid" : "none";
+        }
+      });
+    });
+
+    // Character modal
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const modalName = document.getElementById("modal-name");
+    const modalDesc = document.getElementById("modal-desc");
+    const closeBtn = document.querySelector(".close-btn");
+
+    document.querySelectorAll(".character-card").forEach(card => {
+      card.addEventListener("click", () => {
+        modal.classList.add("active");
+        modalImg.src = card.dataset.img;
+        modalName.textContent = card.dataset.name;
+        modalDesc.textContent = card.dataset.desc;
+      });
+    });
+    closeBtn.addEventListener("click", () => modal.classList.remove("active"));
+  </script>
 </body>
 </html>
