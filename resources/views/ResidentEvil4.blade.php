@@ -1,10 +1,10 @@
-{{-- resources/views/residentevil0.blade.php --}}
+{{-- resources/views/residentevil4.blade.php --}}
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resident Evil 0 — Buku Cerita</title>
+  <title>Resident Evil 4 — Buku Cerita</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Merriweather&display=swap" rel="stylesheet">
   <style>
     body {
@@ -18,12 +18,10 @@
       overflow: hidden;
       transition: background 0.3s, color 0.3s;
     }
-
     body.dark {
       background: #1c1c1c;
       color: #f0e6d2;
     }
-
     .book {
       width: 90%;
       max-width: 900px;
@@ -42,12 +40,10 @@
       background: #2a2a2a;
       color: #f0e6d2;
     }
-
     .page-content {
       flex: 1;
       overflow-y: auto;
     }
-
     h1, h2, h3 {
       font-family: 'Cinzel Decorative', serif;
       margin-top: 0;
@@ -56,12 +52,9 @@
     body.dark h1, body.dark h2, body.dark h3 {
       color: #e3c28d;
     }
-
     h1 { text-align: center; font-size: 2rem; }
     h2 { margin-top: 25px; border-left: 4px solid #c19a6b; padding-left: 10px; }
-
     p { text-align: justify; line-height: 1.7; margin: 15px 0; }
-
     .footer {
       text-align: center;
       font-size: 0.9rem;
@@ -69,7 +62,6 @@
       margin-top: 15px;
     }
     body.dark .footer { color: #ccc; }
-
     .nav {
       display: flex;
       justify-content: space-between;
@@ -86,7 +78,6 @@
       transition: 0.3s;
     }
     .nav button:hover { background: #a98255; }
-
     .image-center, .image-right {
       text-align: center;
       margin: 15px 0;
@@ -97,9 +88,7 @@
       border-radius: 8px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     }
-
     .hidden { display: none; }
-
     .dark-toggle {
       position: absolute;
       top: 15px;
@@ -121,81 +110,83 @@
 
     <!-- Halaman -->
     <div id="page-1" class="page-content">
-      <h1>Resident Evil 0</h1>
+      <h1>Resident Evil 4</h1>
       <h3>Kata Pengantar</h3>
-      <p>Resident Evil 0 membawa kita ke awal kisah kengerian di Pegunungan Arklay. Ikuti perjalanan Rebecca Chambers, anggota termuda S.T.A.R.S. Bravo Team, saat ia menemukan rahasia kelam di balik Umbrella Corporation.</p>
+      <p>Beberapa tahun setelah kehancuran Raccoon City, Leon S. Kennedy kini menjadi agen pemerintah AS. Tugas barunya: menyelamatkan putri presiden yang diculik oleh sekte misterius di sebuah desa terpencil di Spanyol. Namun, apa yang menantinya jauh lebih mengerikan dari sekadar penculikan biasa...</p>
     </div>
 
     <div id="page-2" class="page-content hidden">
       <h2>Daftar Isi</h2>
       <ul>
-        <li>Bab 1 — Malam di Pegunungan Arklay</li>
-        <li>Bab 2 — Pertemuan dengan Billy</li>
-        <li>Bab 3 — Bayangan di Hutan</li>
-        <li>Bab 4 — Rahasia Kereta Ecliptic Express</li>
-        <li>Bab 5 — Misteri Laboratorium Tersembunyi</li>
-        <li>Bab 6 — Kebangkitan Lintah Ratu</li>
-        <li>Bab 7 — Konspirasi Umbrella</li>
-        <li>Bab 8 — Pertarungan Terakhir</li>
-        <li>Bab 9 — Awal dari Segalanya</li>
-        <li>Halaman 10 — Galeri Resident Evil 0</li>
+        <li>Bab 1 — Misi Penyelamatan</li>
+        <li>Bab 2 — Desa Kematian</li>
+        <li>Bab 3 — Teror di Rumah Desa</li>
+        <li>Bab 4 — Los Illuminados</li>
+        <li>Bab 5 — Benteng Saddler</li>
+        <li>Bab 6 — Ashley Graham</li>
+        <li>Bab 7 — Sekte dan Parasit</li>
+        <li>Bab 8 — Pertempuran Terakhir</li>
+        <li>Bab 9 — Pelarian</li>
+        <li>Halaman 10 — Galeri Resident Evil 4</li>
       </ul>
     </div>
 
     <div id="page-3" class="page-content hidden">
-      <h2>Bab 1: Malam di Pegunungan Arklay</h2>
-      <p>Bravo Team dikirim untuk menyelidiki serangkaian pembunuhan aneh. Rebecca Chambers, meski masih muda dan kurang pengalaman, ikut serta. Malam itu, mereka menemukan kereta misterius bernama Ecliptic Express yang berhenti di tengah hutan. Ketika naik ke dalam, Rebecca mendapati pemandangan mengerikan: mayat hidup memenuhi kereta...</p>
-      <div class="image-right"><img src="re0-kereta.jpg" alt="Ecliptic Express"></div>
+      <h2>Bab 1: Misi Penyelamatan</h2>
+      <p>Leon dikirim ke Spanyol untuk mencari Ashley Graham, putri presiden AS. Ditemani dua polisi lokal, ia menuju desa terpencil. Namun, suasana di sana terasa tidak wajar—penduduknya seolah dikendalikan oleh sesuatu yang jahat.</p>
+      <div class="image-right"><img src="re4-village.jpg" alt="Desa Resident Evil 4"></div>
     </div>
 
     <div id="page-4" class="page-content hidden">
-      <h2>Bab 2: Pertemuan dengan Billy</h2>
-      <p>Rebecca bertemu dengan Billy Coen, seorang mantan marinir sekaligus narapidana yang sedang dikawal sebelum kereta itu diserang. Awalnya Rebecca ragu, namun keadaan memaksa mereka bekerja sama untuk bertahan hidup. Hubungan yang penuh ketegangan mulai tumbuh menjadi kerja sama yang tak terduga.</p>
+      <h2>Bab 2: Desa Kematian</h2>
+      <p>Leon diserang oleh warga desa yang berperilaku brutal. Mereka bukan zombie, tapi manusia yang terinfeksi parasit bernama Las Plagas. Setelah pertempuran sengit, Leon menyadari bahwa dia sedang berhadapan dengan sekte fanatik.</p>
     </div>
 
     <div id="page-5" class="page-content hidden">
-      <h2>Bab 3: Bayangan di Hutan</h2>
-      <p>Kereta yang mereka naiki akhirnya tergelincir dan hancur di hutan. Rebecca dan Billy berjalan menembus pepohonan gelap, menghadapi anjing zombie dan makhluk hasil eksperimen Umbrella. Perlahan, keduanya menyadari bahwa ada sesuatu yang lebih besar mengintai mereka.</p>
-      <div class="image-center"><img src="re0-hutan.jpg" alt="Hutan Resident Evil 0"></div>
+      <h2>Bab 3: Teror di Rumah Desa</h2>
+      <p>Leon bersembunyi di rumah tua dan bertemu dengan Luis Sera, mantan peneliti Umbrella. Luis mengungkapkan bahwa parasit Las Plagas digunakan oleh sekte Los Illuminados untuk mengendalikan manusia.</p>
+      <div class="image-center"><img src="re4-luis.jpg" alt="Luis Sera"></div>
     </div>
 
     <div id="page-6" class="page-content hidden">
-      <h2>Bab 4: Rahasia Kereta Ecliptic Express</h2>
-      <p>Rebecca mengetahui bahwa kereta itu adalah bagian dari eksperimen rahasia Umbrella. Catatan-catatan yang ditemukan menunjukkan percobaan terhadap lintah yang dimodifikasi, menciptakan makhluk yang haus darah. Seorang pria misterius dengan mantel panjang, James Marcus, tampaknya menjadi dalang di balik semuanya.</p>
+      <h2>Bab 4: Los Illuminados</h2>
+      <p>Leon menghadapi Bitores Mendez, kepala desa sekaligus pengikut fanatik sekte. Dengan nyaris tak selamat, Leon melanjutkan perjalanan menuju kastil besar milik pemimpin sekte, Ramon Salazar.</p>
+      <div class="image-right"><img src="re4-castle.jpg" alt="Kastil Salazar"></div>
     </div>
 
     <div id="page-7" class="page-content hidden">
-      <h2>Bab 5: Misteri Laboratorium Tersembunyi</h2>
-      <p>Di dalam laboratorium tersembunyi, Rebecca dan Billy menemukan bukti kekejaman Umbrella: penelitian biologis yang tidak manusiawi. Mereka harus melawan monster-mutasi mengerikan, termasuk seekor kelelawar raksasa yang menguasai ruang penelitian.</p>
-      <div class="image-center"><img src="re0-lab.jpg" alt="Laboratorium Resident Evil 0"></div>
+      <h2>Bab 5: Benteng Saddler</h2>
+      <p>Leon dan Ashley akhirnya menemukan kebenaran di balik penculikan tersebut. Osmund Saddler, pemimpin sekte Los Illuminados, berencana menyebarkan parasit Las Plagas ke dunia melalui tubuh Ashley.</p>
     </div>
 
     <div id="page-8" class="page-content hidden">
-      <h2>Bab 6: Kebangkitan Lintah Ratu</h2>
-      <p>Lintah-lintah eksperimen bersatu membentuk makhluk menjijikkan yang dikenal sebagai Lintah Ratu. Sosok itu adalah manifestasi dari kebencian James Marcus terhadap Umbrella. Pertarungan menjadi semakin sulit, Rebecca dan Billy hanya bisa bertahan dengan saling melindungi.</p>
+      <h2>Bab 6: Ashley Graham</h2>
+      <p>Ashley bukan hanya korban, tapi juga kunci dalam rencana Saddler. Leon harus melindunginya dari bahaya tanpa henti, bahkan ketika pasukan Saddler mengepung mereka dari segala arah.</p>
+      <div class="image-center"><img src="re4-ashley.jpg" alt="Ashley Graham"></div>
     </div>
 
     <div id="page-9" class="page-content hidden">
-      <h2>Bab 7: Konspirasi Umbrella</h2>
-      <p>Kebenaran semakin jelas: Umbrella bukan sekadar perusahaan farmasi, melainkan dalang di balik terciptanya virus mematikan. Rebecca menyadari bahwa Bravo Team hanyalah pion dalam permainan besar yang jauh lebih berbahaya dari yang ia bayangkan.</p>
+      <h2>Bab 7: Sekte dan Parasit</h2>
+      <p>Dengan bantuan Luis dan Ada Wong, Leon berhasil menemukan obat untuk menghancurkan parasit di dalam tubuhnya dan Ashley. Namun pengorbanan Luis menjadi pukulan berat bagi Leon.</p>
     </div>
 
     <div id="page-10" class="page-content hidden">
-      <h2>Bab 8: Pertarungan Terakhir</h2>
-      <p>Di ruang bawah tanah fasilitas Umbrella, Rebecca dan Billy menghadapi Lintah Ratu dalam wujud raksasa. Dengan sisa tenaga terakhir, mereka menghancurkan makhluk itu. Namun, kebakaran yang melanda laboratorium memaksa mereka untuk segera melarikan diri.</p>
-      <div class="image-right"><img src="re0-boss.jpg" alt="Pertarungan Lintah Ratu"></div>
+      <h2>Bab 8: Pertempuran Terakhir</h2>
+      <p>Leon menghadapi Saddler dalam pertempuran klimaks di fasilitas penelitian bawah tanah. Dengan bantuan Ada, ia berhasil mengalahkan Saddler menggunakan roket peluncur. Namun Ada menghilang, meninggalkan Leon sendirian bersama Ashley.</p>
+      <div class="image-right"><img src="re4-saddler.jpg" alt="Pertarungan Saddler"></div>
     </div>
 
     <div id="page-11" class="page-content hidden">
-      <h2>Bab 9: Awal dari Segalanya</h2>
-      <p>Rebecca melepaskan Billy, meski tahu ia akan tetap menjadi buronan. Mereka berpisah dengan saling menghormati. Rebecca kemudian menuju ke mansion Spencer, tempat Bravo Team lainnya berada... sebuah awal dari kengerian baru yang akan tercatat dalam sejarah sebagai Insiden Spencer Mansion.</p>
+      <h2>Bab 9: Pelarian</h2>
+      <p>Leon dan Ashley melarikan diri menggunakan jet ski melewati gua yang runtuh. Mereka akhirnya selamat, membawa harapan baru bagi dunia yang hampir dikuasai kegelapan sekte Los Illuminados.</p>
+      <div class="image-center"><img src="re4-escape.jpg" alt="Pelarian Leon dan Ashley"></div>
     </div>
 
     <div id="page-12" class="page-content hidden">
-      <h2>Galeri Resident Evil 0</h2>
-      <div class="image-center"><img src="re0-gallery1.jpg" alt="Rebecca Chambers"></div>
-      <div class="image-center"><img src="re0-gallery2.jpg" alt="Billy Coen"></div>
-      <div class="image-center"><img src="re0-gallery3.jpg" alt="Ecliptic Express"></div>
+      <h2>Galeri Resident Evil 4</h2>
+      <div class="image-center"><img src="re4-gallery1.jpg" alt="Leon S. Kennedy"></div>
+      <div class="image-center"><img src="re4-gallery2.jpg" alt="Ada Wong"></div>
+      <div class="image-center"><img src="re4-gallery3.jpg" alt="Ashley Graham"></div>
     </div>
 
     <!-- Footer -->

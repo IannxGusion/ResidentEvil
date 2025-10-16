@@ -256,7 +256,7 @@
       ['5.png','Resident Evil 5','/residentevil5'],
       ['6.png','Resident Evil 6','/residentevil6'],
       ['7.png','Resident Evil 7','/residentevil7'],
-      ['8.png','Resident Evil Village','/residentevil8'],
+      ['8.png','Resident Evil 8 Village','/residentevil8'],
       ['9.png','Resident Evil 9','/residentevil9']
     ] as [$img, $title, $link])
       <a href="{{ $link }}" class="book">

@@ -1,10 +1,10 @@
-{{-- resources/views/residentevil0.blade.php --}}
+{{-- resources/views/residentevil3.blade.php --}}
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resident Evil 0 — Buku Cerita</title>
+  <title>Resident Evil 3 — Buku Cerita</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Merriweather&display=swap" rel="stylesheet">
   <style>
     body {
@@ -121,81 +121,83 @@
 
     <!-- Halaman -->
     <div id="page-1" class="page-content">
-      <h1>Resident Evil 0</h1>
+      <h1>Resident Evil 3</h1>
       <h3>Kata Pengantar</h3>
-      <p>Resident Evil 0 membawa kita ke awal kisah kengerian di Pegunungan Arklay. Ikuti perjalanan Rebecca Chambers, anggota termuda S.T.A.R.S. Bravo Team, saat ia menemukan rahasia kelam di balik Umbrella Corporation.</p>
+      <p>Raccoon City telah jatuh. Wabah virus T menyebar tanpa kendali. Jill Valentine, anggota S.T.A.R.S., berjuang untuk bertahan hidup di tengah kehancuran. Namun, sesuatu yang lebih mematikan memburunya — proyek biologis yang dikenal sebagai <strong>Nemesis</strong>.</p>
+      <div class="image-center"><img src="re3-intro.jpg" alt="Raccoon City"></div>
     </div>
 
     <div id="page-2" class="page-content hidden">
       <h2>Daftar Isi</h2>
       <ul>
-        <li>Bab 1 — Malam di Pegunungan Arklay</li>
-        <li>Bab 2 — Pertemuan dengan Billy</li>
-        <li>Bab 3 — Bayangan di Hutan</li>
-        <li>Bab 4 — Rahasia Kereta Ecliptic Express</li>
-        <li>Bab 5 — Misteri Laboratorium Tersembunyi</li>
-        <li>Bab 6 — Kebangkitan Lintah Ratu</li>
-        <li>Bab 7 — Konspirasi Umbrella</li>
+        <li>Bab 1 — Awal Mimpi Buruk</li>
+        <li>Bab 2 — Pelarian Jill</li>
+        <li>Bab 3 — Nemesis: Pemburu S.T.A.R.S.</li>
+        <li>Bab 4 — Bertemu Carlos Oliveira</li>
+        <li>Bab 5 — Kengerian di Balik Kota</li>
+        <li>Bab 6 — Rahasia Umbrella Terungkap</li>
+        <li>Bab 7 — Pengkhianatan dan Pengorbanan</li>
         <li>Bab 8 — Pertarungan Terakhir</li>
-        <li>Bab 9 — Awal dari Segalanya</li>
-        <li>Halaman 10 — Galeri Resident Evil 0</li>
+        <li>Bab 9 — Raccoon City Hancur</li>
+        <li>Halaman 10 — Galeri Resident Evil 3</li>
       </ul>
     </div>
 
     <div id="page-3" class="page-content hidden">
-      <h2>Bab 1: Malam di Pegunungan Arklay</h2>
-      <p>Bravo Team dikirim untuk menyelidiki serangkaian pembunuhan aneh. Rebecca Chambers, meski masih muda dan kurang pengalaman, ikut serta. Malam itu, mereka menemukan kereta misterius bernama Ecliptic Express yang berhenti di tengah hutan. Ketika naik ke dalam, Rebecca mendapati pemandangan mengerikan: mayat hidup memenuhi kereta...</p>
-      <div class="image-right"><img src="re0-kereta.jpg" alt="Ecliptic Express"></div>
+      <h2>Bab 1: Awal Mimpi Buruk</h2>
+      <p>Jill Valentine terperangkap dalam mimpi buruk yang tak berakhir. Rumahnya dikepung zombie, dan jalanan Raccoon City telah menjadi neraka. Ia tahu, waktunya untuk melarikan diri sudah tiba sebelum kota itu sepenuhnya musnah.</p>
+      <div class="image-right"><img src="re3-jill-room.jpg" alt="Jill Valentine di Apartemen"></div>
     </div>
 
     <div id="page-4" class="page-content hidden">
-      <h2>Bab 2: Pertemuan dengan Billy</h2>
-      <p>Rebecca bertemu dengan Billy Coen, seorang mantan marinir sekaligus narapidana yang sedang dikawal sebelum kereta itu diserang. Awalnya Rebecca ragu, namun keadaan memaksa mereka bekerja sama untuk bertahan hidup. Hubungan yang penuh ketegangan mulai tumbuh menjadi kerja sama yang tak terduga.</p>
+      <h2>Bab 2: Pelarian Jill</h2>
+      <p>Jill berlari melewati reruntuhan kota, mencari jalan keluar. Namun, suara langkah berat dan raungan mengerikan menggema di kejauhan — sesuatu sedang memburunya. Sesuatu yang jauh lebih berbahaya daripada zombie biasa.</p>
     </div>
 
     <div id="page-5" class="page-content hidden">
-      <h2>Bab 3: Bayangan di Hutan</h2>
-      <p>Kereta yang mereka naiki akhirnya tergelincir dan hancur di hutan. Rebecca dan Billy berjalan menembus pepohonan gelap, menghadapi anjing zombie dan makhluk hasil eksperimen Umbrella. Perlahan, keduanya menyadari bahwa ada sesuatu yang lebih besar mengintai mereka.</p>
-      <div class="image-center"><img src="re0-hutan.jpg" alt="Hutan Resident Evil 0"></div>
+      <h2>Bab 3: Nemesis — Pemburu S.T.A.R.S.</h2>
+      <p>Dari kegelapan muncul makhluk raksasa berjas hitam: <strong>Nemesis</strong>. Ia hanya memiliki satu tujuan — memburu semua anggota S.T.A.R.S. Jill menjadi target utama. Dengan kekuatan luar biasa, Nemesis menghancurkan apapun yang menghalanginya.</p>
+      <div class="image-center"><img src="re3-nemesis.jpg" alt="Nemesis"></div>
     </div>
 
     <div id="page-6" class="page-content hidden">
-      <h2>Bab 4: Rahasia Kereta Ecliptic Express</h2>
-      <p>Rebecca mengetahui bahwa kereta itu adalah bagian dari eksperimen rahasia Umbrella. Catatan-catatan yang ditemukan menunjukkan percobaan terhadap lintah yang dimodifikasi, menciptakan makhluk yang haus darah. Seorang pria misterius dengan mantel panjang, James Marcus, tampaknya menjadi dalang di balik semuanya.</p>
+      <h2>Bab 4: Bertemu Carlos Oliveira</h2>
+      <p>Dalam keputusasaan, Jill diselamatkan oleh Carlos Oliveira, anggota Umbrella Biohazard Countermeasure Service (U.B.C.S). Meski berasal dari Umbrella, Carlos justru membantu Jill menemukan jalan keluar dari kota.</p>
+      <div class="image-right"><img src="re3-carlos.jpg" alt="Carlos Oliveira"></div>
     </div>
 
     <div id="page-7" class="page-content hidden">
-      <h2>Bab 5: Misteri Laboratorium Tersembunyi</h2>
-      <p>Di dalam laboratorium tersembunyi, Rebecca dan Billy menemukan bukti kekejaman Umbrella: penelitian biologis yang tidak manusiawi. Mereka harus melawan monster-mutasi mengerikan, termasuk seekor kelelawar raksasa yang menguasai ruang penelitian.</p>
-      <div class="image-center"><img src="re0-lab.jpg" alt="Laboratorium Resident Evil 0"></div>
+      <h2>Bab 5: Kengerian di Balik Kota</h2>
+      <p>Keduanya menemukan sisa-sisa warga yang selamat, namun sebagian besar sudah terinfeksi. Di bawah tanah, laboratorium rahasia Umbrella menyimpan kebenaran mengerikan — virus T bukan satu-satunya proyek mereka.</p>
     </div>
 
     <div id="page-8" class="page-content hidden">
-      <h2>Bab 6: Kebangkitan Lintah Ratu</h2>
-      <p>Lintah-lintah eksperimen bersatu membentuk makhluk menjijikkan yang dikenal sebagai Lintah Ratu. Sosok itu adalah manifestasi dari kebencian James Marcus terhadap Umbrella. Pertarungan menjadi semakin sulit, Rebecca dan Billy hanya bisa bertahan dengan saling melindungi.</p>
+      <h2>Bab 6: Rahasia Umbrella Terungkap</h2>
+      <p>Jill menemukan file tentang eksperimen Nemesis. Ia adalah hasil modifikasi lanjutan dari proyek Tyrant, dirancang khusus untuk berburu manusia. Umbrella menciptakan senjata biologis yang tak terkendali.</p>
     </div>
 
     <div id="page-9" class="page-content hidden">
-      <h2>Bab 7: Konspirasi Umbrella</h2>
-      <p>Kebenaran semakin jelas: Umbrella bukan sekadar perusahaan farmasi, melainkan dalang di balik terciptanya virus mematikan. Rebecca menyadari bahwa Bravo Team hanyalah pion dalam permainan besar yang jauh lebih berbahaya dari yang ia bayangkan.</p>
+      <h2>Bab 7: Pengkhianatan dan Pengorbanan</h2>
+      <p>Salah satu anggota U.B.C.S. mengkhianati tim, meninggalkan mereka di ambang kehancuran. Carlos berkorban untuk menyelamatkan Jill dari infeksi virus, membuktikan bahwa ia lebih manusiawi daripada Umbrella sendiri.</p>
     </div>
 
     <div id="page-10" class="page-content hidden">
       <h2>Bab 8: Pertarungan Terakhir</h2>
-      <p>Di ruang bawah tanah fasilitas Umbrella, Rebecca dan Billy menghadapi Lintah Ratu dalam wujud raksasa. Dengan sisa tenaga terakhir, mereka menghancurkan makhluk itu. Namun, kebakaran yang melanda laboratorium memaksa mereka untuk segera melarikan diri.</p>
-      <div class="image-right"><img src="re0-boss.jpg" alt="Pertarungan Lintah Ratu"></div>
+      <p>Dengan senjata eksperimental, Jill menghadapi Nemesis di fasilitas penelitian bawah tanah. Pertarungan brutal berakhir dengan Jill menghancurkan makhluk itu menggunakan railgun. Nemesis akhirnya hancur, namun kota juga akan musnah.</p>
+      <div class="image-center"><img src="re3-finalbattle.jpg" alt="Pertarungan Terakhir Nemesis"></div>
     </div>
 
     <div id="page-11" class="page-content hidden">
-      <h2>Bab 9: Awal dari Segalanya</h2>
-      <p>Rebecca melepaskan Billy, meski tahu ia akan tetap menjadi buronan. Mereka berpisah dengan saling menghormati. Rebecca kemudian menuju ke mansion Spencer, tempat Bravo Team lainnya berada... sebuah awal dari kengerian baru yang akan tercatat dalam sejarah sebagai Insiden Spencer Mansion.</p>
+      <h2>Bab 9: Raccoon City Hancur</h2>
+      <p>Ketika Jill dan Carlos berhasil kabur, rudal nuklir diluncurkan untuk menghapus Raccoon City dari peta. Jill menatap langit merah menyala, bersumpah untuk mengungkap kejahatan Umbrella ke seluruh dunia.</p>
+      <div class="image-right"><img src="re3-ending.jpg" alt="Raccoon City Hancur"></div>
     </div>
 
     <div id="page-12" class="page-content hidden">
-      <h2>Galeri Resident Evil 0</h2>
-      <div class="image-center"><img src="re0-gallery1.jpg" alt="Rebecca Chambers"></div>
-      <div class="image-center"><img src="re0-gallery2.jpg" alt="Billy Coen"></div>
-      <div class="image-center"><img src="re0-gallery3.jpg" alt="Ecliptic Express"></div>
+      <h2>Galeri Resident Evil 3</h2>
+      <div class="image-center"><img src="re3-jill.jpg" alt="Jill Valentine"></div>
+      <div class="image-center"><img src="re3-carlos2.jpg" alt="Carlos Oliveira"></div>
+      <div class="image-center"><img src="re3-nemesis2.jpg" alt="Nemesis Kedua"></div>
     </div>
 
     <!-- Footer -->

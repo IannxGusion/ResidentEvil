@@ -1,16 +1,16 @@
-{{-- resources/views/residentevil0.blade.php --}}
+{{-- resources/views/residentevil6.blade.php --}}
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resident Evil 0 — Buku Cerita</title>
+  <title>Resident Evil 6 — Buku Cerita</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Merriweather&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Merriweather', serif;
-      background: #d6c6a8;
+      background: #cbbba0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -20,7 +20,7 @@
     }
 
     body.dark {
-      background: #1c1c1c;
+      background: #111;
       color: #f0e6d2;
     }
 
@@ -29,15 +29,16 @@
       max-width: 900px;
       height: 90vh;
       background: #fdf6e3;
-      box-shadow: 0 0 30px rgba(0,0,0,0.4);
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
       border-radius: 8px;
       position: relative;
       padding: 40px;
-      box-sizing: border-box;
       display: flex;
       flex-direction: column;
+      box-sizing: border-box;
       transition: background 0.3s, color 0.3s;
     }
+
     body.dark .book {
       background: #2a2a2a;
       color: #f0e6d2;
@@ -50,14 +51,14 @@
 
     h1, h2, h3 {
       font-family: 'Cinzel Decorative', serif;
-      margin-top: 0;
       color: #4b2e16;
     }
+
     body.dark h1, body.dark h2, body.dark h3 {
       color: #e3c28d;
     }
 
-    h1 { text-align: center; font-size: 2rem; }
+    h1 { text-align: center; font-size: 2rem; margin-top: 0; }
     h2 { margin-top: 25px; border-left: 4px solid #c19a6b; padding-left: 10px; }
 
     p { text-align: justify; line-height: 1.7; margin: 15px 0; }
@@ -75,6 +76,7 @@
       justify-content: space-between;
       margin-top: 10px;
     }
+
     .nav button {
       background: #c19a6b;
       border: none;
@@ -85,13 +87,16 @@
       cursor: pointer;
       transition: 0.3s;
     }
+
     .nav button:hover { background: #a98255; }
 
     .image-center, .image-right {
       text-align: center;
       margin: 15px 0;
     }
+
     .image-right { text-align: right; }
+
     .image-center img, .image-right img {
       max-width: 80%;
       border-radius: 8px;
@@ -112,6 +117,7 @@
       cursor: pointer;
       font-size: 0.9rem;
     }
+
     body.dark .dark-toggle { background: #e3c28d; color: #222; }
   </style>
 </head>
@@ -121,81 +127,76 @@
 
     <!-- Halaman -->
     <div id="page-1" class="page-content">
-      <h1>Resident Evil 0</h1>
+      <h1>Resident Evil 6</h1>
       <h3>Kata Pengantar</h3>
-      <p>Resident Evil 0 membawa kita ke awal kisah kengerian di Pegunungan Arklay. Ikuti perjalanan Rebecca Chambers, anggota termuda S.T.A.R.S. Bravo Team, saat ia menemukan rahasia kelam di balik Umbrella Corporation.</p>
+      <p>Wabah global melanda dunia. Virus baru, dikenal sebagai C-Virus, mengubah manusia menjadi monster di seluruh dunia. Empat kisah saling terhubung — Leon, Chris, Jake, dan Ada Wong — bertemu di tengah kekacauan untuk mengungkap konspirasi besar yang melibatkan Neo-Umbrella.</p>
     </div>
 
     <div id="page-2" class="page-content hidden">
       <h2>Daftar Isi</h2>
       <ul>
-        <li>Bab 1 — Malam di Pegunungan Arklay</li>
-        <li>Bab 2 — Pertemuan dengan Billy</li>
-        <li>Bab 3 — Bayangan di Hutan</li>
-        <li>Bab 4 — Rahasia Kereta Ecliptic Express</li>
-        <li>Bab 5 — Misteri Laboratorium Tersembunyi</li>
-        <li>Bab 6 — Kebangkitan Lintah Ratu</li>
-        <li>Bab 7 — Konspirasi Umbrella</li>
-        <li>Bab 8 — Pertarungan Terakhir</li>
-        <li>Bab 9 — Awal dari Segalanya</li>
-        <li>Halaman 10 — Galeri Resident Evil 0</li>
+        <li>Bab 1 — Awal Kekacauan</li>
+        <li>Bab 2 — Kota yang Terinfeksi</li>
+        <li>Bab 3 — Pasukan BSAA</li>
+        <li>Bab 4 — Warisan Wesker</li>
+        <li>Bab 5 — Misi Ada Wong</li>
+        <li>Bab 6 — Konspirasi Neo-Umbrella</li>
+        <li>Bab 7 — Pertempuran di Langit</li>
+        <li>Bab 8 — Akhir Kegelapan</li>
+        <li>Halaman 9 — Galeri Resident Evil 6</li>
       </ul>
     </div>
 
     <div id="page-3" class="page-content hidden">
-      <h2>Bab 1: Malam di Pegunungan Arklay</h2>
-      <p>Bravo Team dikirim untuk menyelidiki serangkaian pembunuhan aneh. Rebecca Chambers, meski masih muda dan kurang pengalaman, ikut serta. Malam itu, mereka menemukan kereta misterius bernama Ecliptic Express yang berhenti di tengah hutan. Ketika naik ke dalam, Rebecca mendapati pemandangan mengerikan: mayat hidup memenuhi kereta...</p>
-      <div class="image-right"><img src="re0-kereta.jpg" alt="Ecliptic Express"></div>
+      <h2>Bab 1: Awal Kekacauan</h2>
+      <p>Leon S. Kennedy menghadapi mimpi buruk baru di Tall Oaks ketika Presiden AS sendiri berubah menjadi zombie. Keputusan berat diambil — dan kengerian dimulai. Bersama Helena Harper, Leon mencari kebenaran di balik serangan itu.</p>
+      <div class="image-right"><img src="re6-leon.jpg" alt="Leon S. Kennedy"></div>
     </div>
 
     <div id="page-4" class="page-content hidden">
-      <h2>Bab 2: Pertemuan dengan Billy</h2>
-      <p>Rebecca bertemu dengan Billy Coen, seorang mantan marinir sekaligus narapidana yang sedang dikawal sebelum kereta itu diserang. Awalnya Rebecca ragu, namun keadaan memaksa mereka bekerja sama untuk bertahan hidup. Hubungan yang penuh ketegangan mulai tumbuh menjadi kerja sama yang tak terduga.</p>
+      <h2>Bab 2: Kota yang Terinfeksi</h2>
+      <p>Di bawah hujan lebat, Leon dan Helena melarikan diri dari kota yang telah jatuh. Sementara itu, pasukan BSAA yang dipimpin Chris Redfield bertempur di Eropa Timur menghadapi bio-organic weapons (B.O.W) baru hasil eksperimen C-Virus.</p>
+      <div class="image-center"><img src="re6-city.jpg" alt="Kota Tall Oaks"></div>
     </div>
 
     <div id="page-5" class="page-content hidden">
-      <h2>Bab 3: Bayangan di Hutan</h2>
-      <p>Kereta yang mereka naiki akhirnya tergelincir dan hancur di hutan. Rebecca dan Billy berjalan menembus pepohonan gelap, menghadapi anjing zombie dan makhluk hasil eksperimen Umbrella. Perlahan, keduanya menyadari bahwa ada sesuatu yang lebih besar mengintai mereka.</p>
-      <div class="image-center"><img src="re0-hutan.jpg" alt="Hutan Resident Evil 0"></div>
+      <h2>Bab 3: Pasukan BSAA</h2>
+      <p>Chris, yang masih dihantui oleh masa lalunya, memimpin tim BSAA untuk menumpas Neo-Umbrella. Namun, pengkhianatan dari dalam mengubah misi menjadi tragedi berdarah. Rekannya tewas, dan Chris terpaksa menghadapi trauma lamanya.</p>
     </div>
 
     <div id="page-6" class="page-content hidden">
-      <h2>Bab 4: Rahasia Kereta Ecliptic Express</h2>
-      <p>Rebecca mengetahui bahwa kereta itu adalah bagian dari eksperimen rahasia Umbrella. Catatan-catatan yang ditemukan menunjukkan percobaan terhadap lintah yang dimodifikasi, menciptakan makhluk yang haus darah. Seorang pria misterius dengan mantel panjang, James Marcus, tampaknya menjadi dalang di balik semuanya.</p>
+      <h2>Bab 4: Warisan Wesker</h2>
+      <p>Jake Muller, putra dari Albert Wesker, menjadi target Neo-Umbrella karena darahnya mengandung antibodi terhadap C-Virus. Bersama Sherry Birkin, mereka berusaha melarikan diri dari kejaran monster J’avo dan bio-weapon mengerikan.</p>
+      <div class="image-center"><img src="re6-jake.jpg" alt="Jake Muller dan Sherry Birkin"></div>
     </div>
 
     <div id="page-7" class="page-content hidden">
-      <h2>Bab 5: Misteri Laboratorium Tersembunyi</h2>
-      <p>Di dalam laboratorium tersembunyi, Rebecca dan Billy menemukan bukti kekejaman Umbrella: penelitian biologis yang tidak manusiawi. Mereka harus melawan monster-mutasi mengerikan, termasuk seekor kelelawar raksasa yang menguasai ruang penelitian.</p>
-      <div class="image-center"><img src="re0-lab.jpg" alt="Laboratorium Resident Evil 0"></div>
+      <h2>Bab 5: Misi Ada Wong</h2>
+      <p>Ada Wong muncul di balik bayangan. Dengan tujuan misterius, ia menyusup ke markas Neo-Umbrella. Namun ada seseorang yang menggunakan wajahnya untuk menciptakan kekacauan — Carla Radames, ilmuwan gila di balik tirai virus baru ini.</p>
+      <div class="image-right"><img src="re6-ada.jpg" alt="Ada Wong"></div>
     </div>
 
     <div id="page-8" class="page-content hidden">
-      <h2>Bab 6: Kebangkitan Lintah Ratu</h2>
-      <p>Lintah-lintah eksperimen bersatu membentuk makhluk menjijikkan yang dikenal sebagai Lintah Ratu. Sosok itu adalah manifestasi dari kebencian James Marcus terhadap Umbrella. Pertarungan menjadi semakin sulit, Rebecca dan Billy hanya bisa bertahan dengan saling melindungi.</p>
+      <h2>Bab 6: Konspirasi Neo-Umbrella</h2>
+      <p>Semua jalur akhirnya bertemu di China. Leon, Chris, Jake, dan Ada melawan gelombang mutasi besar-besaran. Kebenaran tentang Neo-Umbrella dan eksperimen C-Virus akhirnya terungkap.</p>
     </div>
 
     <div id="page-9" class="page-content hidden">
-      <h2>Bab 7: Konspirasi Umbrella</h2>
-      <p>Kebenaran semakin jelas: Umbrella bukan sekadar perusahaan farmasi, melainkan dalang di balik terciptanya virus mematikan. Rebecca menyadari bahwa Bravo Team hanyalah pion dalam permainan besar yang jauh lebih berbahaya dari yang ia bayangkan.</p>
+      <h2>Bab 7: Pertempuran di Langit</h2>
+      <p>Pertempuran terakhir terjadi di atas kapal perang Neo-Umbrella. Chris dan Piers melawan makhluk raksasa, sedangkan Leon berhadapan dengan Carla yang telah bermutasi. Dunia di ambang kehancuran total.</p>
+      <div class="image-center"><img src="re6-battle.jpg" alt="Pertempuran di Kapal"></div>
     </div>
 
     <div id="page-10" class="page-content hidden">
-      <h2>Bab 8: Pertarungan Terakhir</h2>
-      <p>Di ruang bawah tanah fasilitas Umbrella, Rebecca dan Billy menghadapi Lintah Ratu dalam wujud raksasa. Dengan sisa tenaga terakhir, mereka menghancurkan makhluk itu. Namun, kebakaran yang melanda laboratorium memaksa mereka untuk segera melarikan diri.</p>
-      <div class="image-right"><img src="re0-boss.jpg" alt="Pertarungan Lintah Ratu"></div>
+      <h2>Bab 8: Akhir Kegelapan</h2>
+      <p>Piers mengorbankan dirinya demi menghentikan virus di kapal itu. Chris bersumpah untuk terus berjuang. Leon dan Ada berpisah seperti biasa, masing-masing membawa rahasia mereka sendiri. Dunia mulai pulih, tapi bayangan kegelapan belum benar-benar lenyap.</p>
     </div>
 
     <div id="page-11" class="page-content hidden">
-      <h2>Bab 9: Awal dari Segalanya</h2>
-      <p>Rebecca melepaskan Billy, meski tahu ia akan tetap menjadi buronan. Mereka berpisah dengan saling menghormati. Rebecca kemudian menuju ke mansion Spencer, tempat Bravo Team lainnya berada... sebuah awal dari kengerian baru yang akan tercatat dalam sejarah sebagai Insiden Spencer Mansion.</p>
-    </div>
-
-    <div id="page-12" class="page-content hidden">
-      <h2>Galeri Resident Evil 0</h2>
-      <div class="image-center"><img src="re0-gallery1.jpg" alt="Rebecca Chambers"></div>
-      <div class="image-center"><img src="re0-gallery2.jpg" alt="Billy Coen"></div>
-      <div class="image-center"><img src="re0-gallery3.jpg" alt="Ecliptic Express"></div>
+      <h2>Galeri Resident Evil 6</h2>
+      <div class="image-center"><img src="re6-leonhelena.jpg" alt="Leon dan Helena"></div>
+      <div class="image-center"><img src="re6-chrispiers.jpg" alt="Chris dan Piers"></div>
+      <div class="image-center"><img src="re6-jakeada.jpg" alt="Jake dan Ada Wong"></div>
     </div>
 
     <!-- Footer -->
@@ -210,7 +211,7 @@
 
   <script>
     let currentPage = 1;
-    const totalPages = 12;
+    const totalPages = 11;
 
     function showPage(page) {
       for (let i = 1; i <= totalPages; i++) {

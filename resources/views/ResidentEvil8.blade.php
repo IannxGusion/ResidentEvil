@@ -1,10 +1,10 @@
-{{-- resources/views/residentevil0.blade.php --}}
+{{-- resources/views/residentevil8.blade.php --}}
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resident Evil 0 — Buku Cerita</title>
+  <title>Resident Evil 8 — Village</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Merriweather&display=swap" rel="stylesheet">
   <style>
     body {
@@ -121,81 +121,85 @@
 
     <!-- Halaman -->
     <div id="page-1" class="page-content">
-      <h1>Resident Evil 0</h1>
+      <h1>Resident Evil 8: Village</h1>
       <h3>Kata Pengantar</h3>
-      <p>Resident Evil 0 membawa kita ke awal kisah kengerian di Pegunungan Arklay. Ikuti perjalanan Rebecca Chambers, anggota termuda S.T.A.R.S. Bravo Team, saat ia menemukan rahasia kelam di balik Umbrella Corporation.</p>
+      <p>Beberapa tahun setelah peristiwa di Louisiana, Ethan Winters hidup damai bersama Mia dan anaknya, Rose. Namun ketenangan itu hancur ketika Chris Redfield muncul dan menyeret Ethan ke mimpi buruk baru — sebuah desa misterius di Eropa yang diselimuti kutukan.</p>
+      <div class="image-center"><img src="re8-village.jpg" alt="Desa Resident Evil 8"></div>
     </div>
 
     <div id="page-2" class="page-content hidden">
       <h2>Daftar Isi</h2>
       <ul>
-        <li>Bab 1 — Malam di Pegunungan Arklay</li>
-        <li>Bab 2 — Pertemuan dengan Billy</li>
-        <li>Bab 3 — Bayangan di Hutan</li>
-        <li>Bab 4 — Rahasia Kereta Ecliptic Express</li>
-        <li>Bab 5 — Misteri Laboratorium Tersembunyi</li>
-        <li>Bab 6 — Kebangkitan Lintah Ratu</li>
-        <li>Bab 7 — Konspirasi Umbrella</li>
-        <li>Bab 8 — Pertarungan Terakhir</li>
-        <li>Bab 9 — Awal dari Segalanya</li>
-        <li>Halaman 10 — Galeri Resident Evil 0</li>
+        <li>Bab 1 — Kehidupan yang Tenang</li>
+        <li>Bab 2 — Serangan Tengah Malam</li>
+        <li>Bab 3 — Desa Kutukan</li>
+        <li>Bab 4 — Kastil Dimitrescu</li>
+        <li>Bab 5 — Bayang-bayang Beneviento</li>
+        <li>Bab 6 — Danau Moreau</li>
+        <li>Bab 7 — Pabrik Heisenberg</li>
+        <li>Bab 8 — Kebenaran Chris Redfield</li>
+        <li>Bab 9 — Rose dan Harapan Baru</li>
+        <li>Halaman 10 — Galeri Village</li>
       </ul>
     </div>
 
     <div id="page-3" class="page-content hidden">
-      <h2>Bab 1: Malam di Pegunungan Arklay</h2>
-      <p>Bravo Team dikirim untuk menyelidiki serangkaian pembunuhan aneh. Rebecca Chambers, meski masih muda dan kurang pengalaman, ikut serta. Malam itu, mereka menemukan kereta misterius bernama Ecliptic Express yang berhenti di tengah hutan. Ketika naik ke dalam, Rebecca mendapati pemandangan mengerikan: mayat hidup memenuhi kereta...</p>
-      <div class="image-right"><img src="re0-kereta.jpg" alt="Ecliptic Express"></div>
+      <h2>Bab 1: Kehidupan yang Tenang</h2>
+      <p>Ethan dan Mia berusaha melupakan masa lalu. Putri mereka, Rose, tumbuh dengan sehat. Namun, ketenangan itu tidak bertahan lama...</p>
     </div>
 
     <div id="page-4" class="page-content hidden">
-      <h2>Bab 2: Pertemuan dengan Billy</h2>
-      <p>Rebecca bertemu dengan Billy Coen, seorang mantan marinir sekaligus narapidana yang sedang dikawal sebelum kereta itu diserang. Awalnya Rebecca ragu, namun keadaan memaksa mereka bekerja sama untuk bertahan hidup. Hubungan yang penuh ketegangan mulai tumbuh menjadi kerja sama yang tak terduga.</p>
+      <h2>Bab 2: Serangan Tengah Malam</h2>
+      <p>Chris Redfield muncul di rumah mereka — dan menembak Mia tanpa penjelasan. Rose diculik, dan Ethan pingsan. Saat sadar, ia menemukan dirinya di sebuah hutan bersalju yang gelap...</p>
+      <div class="image-center"><img src="re8-forest.jpg" alt="Hutan Bersalju"></div>
     </div>
 
     <div id="page-5" class="page-content hidden">
-      <h2>Bab 3: Bayangan di Hutan</h2>
-      <p>Kereta yang mereka naiki akhirnya tergelincir dan hancur di hutan. Rebecca dan Billy berjalan menembus pepohonan gelap, menghadapi anjing zombie dan makhluk hasil eksperimen Umbrella. Perlahan, keduanya menyadari bahwa ada sesuatu yang lebih besar mengintai mereka.</p>
-      <div class="image-center"><img src="re0-hutan.jpg" alt="Hutan Resident Evil 0"></div>
+      <h2>Bab 3: Desa Kutukan</h2>
+      <p>Desa itu dihuni oleh penduduk yang putus asa dan makhluk menyeramkan yang disebut Lycans. Ethan berjuang menemukan Rose, sementara para penghuni menyembah empat penguasa yang memerintah dengan kekuatan supernatural.</p>
+      <div class="image-center"><img src="re8-lycan.jpg" alt="Lycans"></div>
     </div>
 
     <div id="page-6" class="page-content hidden">
-      <h2>Bab 4: Rahasia Kereta Ecliptic Express</h2>
-      <p>Rebecca mengetahui bahwa kereta itu adalah bagian dari eksperimen rahasia Umbrella. Catatan-catatan yang ditemukan menunjukkan percobaan terhadap lintah yang dimodifikasi, menciptakan makhluk yang haus darah. Seorang pria misterius dengan mantel panjang, James Marcus, tampaknya menjadi dalang di balik semuanya.</p>
+      <h2>Bab 4: Kastil Dimitrescu</h2>
+      <p>Ethan menghadapi Lady Dimitrescu, vampir bangsawan yang haus darah. Ia harus melawan ketiga putrinya dan sang Lady sendiri untuk melanjutkan perjalanan.</p>
+      <div class="image-right"><img src="re8-dimitrescu.jpg" alt="Lady Dimitrescu"></div>
     </div>
 
     <div id="page-7" class="page-content hidden">
-      <h2>Bab 5: Misteri Laboratorium Tersembunyi</h2>
-      <p>Di dalam laboratorium tersembunyi, Rebecca dan Billy menemukan bukti kekejaman Umbrella: penelitian biologis yang tidak manusiawi. Mereka harus melawan monster-mutasi mengerikan, termasuk seekor kelelawar raksasa yang menguasai ruang penelitian.</p>
-      <div class="image-center"><img src="re0-lab.jpg" alt="Laboratorium Resident Evil 0"></div>
+      <h2>Bab 5: Bayang-bayang Beneviento</h2>
+      <p>Di rumah boneka Donna Beneviento, Ethan kehilangan semua senjatanya dan terjebak dalam mimpi buruk psikologis. Ia harus memecahkan teka-teki dan menghadapi ketakutannya sendiri.</p>
+      <div class="image-center"><img src="re8-donna.jpg" alt="Donna Beneviento"></div>
     </div>
 
     <div id="page-8" class="page-content hidden">
-      <h2>Bab 6: Kebangkitan Lintah Ratu</h2>
-      <p>Lintah-lintah eksperimen bersatu membentuk makhluk menjijikkan yang dikenal sebagai Lintah Ratu. Sosok itu adalah manifestasi dari kebencian James Marcus terhadap Umbrella. Pertarungan menjadi semakin sulit, Rebecca dan Billy hanya bisa bertahan dengan saling melindungi.</p>
+      <h2>Bab 6: Danau Moreau</h2>
+      <p>Salvatore Moreau, monster setengah manusia, menjaga bagian tubuh Rose yang lain. Danau yang tercemar menjadi arena pertempuran yang mematikan.</p>
+      <div class="image-center"><img src="re8-moreau.jpg" alt="Salvatore Moreau"></div>
     </div>
 
     <div id="page-9" class="page-content hidden">
-      <h2>Bab 7: Konspirasi Umbrella</h2>
-      <p>Kebenaran semakin jelas: Umbrella bukan sekadar perusahaan farmasi, melainkan dalang di balik terciptanya virus mematikan. Rebecca menyadari bahwa Bravo Team hanyalah pion dalam permainan besar yang jauh lebih berbahaya dari yang ia bayangkan.</p>
+      <h2>Bab 7: Pabrik Heisenberg</h2>
+      <p>Heisenberg, sang insinyur gila, menciptakan pasukan mesin pembunuh. Ethan harus menembus pabrik logam dan melawan ciptaan mengerikan Heisenberg.</p>
+      <div class="image-right"><img src="re8-heisenberg.jpg" alt="Pabrik Heisenberg"></div>
     </div>
 
     <div id="page-10" class="page-content hidden">
-      <h2>Bab 8: Pertarungan Terakhir</h2>
-      <p>Di ruang bawah tanah fasilitas Umbrella, Rebecca dan Billy menghadapi Lintah Ratu dalam wujud raksasa. Dengan sisa tenaga terakhir, mereka menghancurkan makhluk itu. Namun, kebakaran yang melanda laboratorium memaksa mereka untuk segera melarikan diri.</p>
-      <div class="image-right"><img src="re0-boss.jpg" alt="Pertarungan Lintah Ratu"></div>
+      <h2>Bab 8: Kebenaran Chris Redfield</h2>
+      <p>Chris mengungkapkan bahwa Mia yang dibunuh sebenarnya adalah Eveline yang menyamar. Ia berusaha menyelamatkan Rose dan menebus kesalahannya. Umbrella baru kini mencoba memperbaiki masa lalu.</p>
     </div>
 
     <div id="page-11" class="page-content hidden">
-      <h2>Bab 9: Awal dari Segalanya</h2>
-      <p>Rebecca melepaskan Billy, meski tahu ia akan tetap menjadi buronan. Mereka berpisah dengan saling menghormati. Rebecca kemudian menuju ke mansion Spencer, tempat Bravo Team lainnya berada... sebuah awal dari kengerian baru yang akan tercatat dalam sejarah sebagai Insiden Spencer Mansion.</p>
+      <h2>Bab 9: Rose dan Harapan Baru</h2>
+      <p>Ethan mengorbankan dirinya untuk menghancurkan Mother Miranda dan menyelamatkan Rose. Chris membawa Rose ke tempat aman, dan dunia akhirnya mendapat harapan baru. Namun, nasib Ethan tetap menjadi misteri...</p>
+      <div class="image-center"><img src="re8-ending.jpg" alt="Akhir Resident Evil 8"></div>
     </div>
 
     <div id="page-12" class="page-content hidden">
-      <h2>Galeri Resident Evil 0</h2>
-      <div class="image-center"><img src="re0-gallery1.jpg" alt="Rebecca Chambers"></div>
-      <div class="image-center"><img src="re0-gallery2.jpg" alt="Billy Coen"></div>
-      <div class="image-center"><img src="re0-gallery3.jpg" alt="Ecliptic Express"></div>
+      <h2>Galeri Village</h2>
+      <div class="image-center"><img src="re8-gallery1.jpg" alt="Desa Bersalju"></div>
+      <div class="image-center"><img src="re8-gallery2.jpg" alt="Lady Dimitrescu"></div>
+      <div class="image-center"><img src="re8-gallery3.jpg" alt="Mother Miranda"></div>
     </div>
 
     <!-- Footer -->

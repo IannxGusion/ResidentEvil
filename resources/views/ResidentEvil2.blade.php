@@ -1,16 +1,16 @@
-{{-- resources/views/residentevil0.blade.php --}}
+{{-- resources/views/residentevil2.blade.php --}}
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resident Evil 0 — Buku Cerita</title>
+  <title>Resident Evil 2 — Buku Cerita</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Merriweather&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Merriweather', serif;
-      background: #d6c6a8;
+      background: #c5b89f;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -20,8 +20,8 @@
     }
 
     body.dark {
-      background: #1c1c1c;
-      color: #f0e6d2;
+      background: #0d0d0d;
+      color: #f8f0dc;
     }
 
     .book {
@@ -30,28 +30,33 @@
       height: 90vh;
       background: #fdf6e3;
       box-shadow: 0 0 30px rgba(0,0,0,0.4);
-      border-radius: 8px;
+      border-radius: 10px;
       position: relative;
       padding: 40px;
-      box-sizing: border-box;
       display: flex;
       flex-direction: column;
+      box-sizing: border-box;
       transition: background 0.3s, color 0.3s;
     }
     body.dark .book {
-      background: #2a2a2a;
-      color: #f0e6d2;
+      background: #222;
+      color: #f8f0dc;
     }
 
     .page-content {
       flex: 1;
       overflow-y: auto;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1, h2, h3 {
       font-family: 'Cinzel Decorative', serif;
-      margin-top: 0;
-      color: #4b2e16;
+      color: #42210b;
     }
     body.dark h1, body.dark h2, body.dark h3 {
       color: #e3c28d;
@@ -76,16 +81,16 @@
       margin-top: 10px;
     }
     .nav button {
-      background: #c19a6b;
+      background: #a77a4b;
       border: none;
       padding: 8px 16px;
-      border-radius: 5px;
+      border-radius: 6px;
       color: white;
       font-weight: bold;
       cursor: pointer;
       transition: 0.3s;
     }
-    .nav button:hover { background: #a98255; }
+    .nav button:hover { background: #8a6236; }
 
     .image-center, .image-right {
       text-align: center;
@@ -95,7 +100,7 @@
     .image-center img, .image-right img {
       max-width: 80%;
       border-radius: 8px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
     }
 
     .hidden { display: none; }
@@ -121,81 +126,82 @@
 
     <!-- Halaman -->
     <div id="page-1" class="page-content">
-      <h1>Resident Evil 0</h1>
+      <h1>Resident Evil 2</h1>
       <h3>Kata Pengantar</h3>
-      <p>Resident Evil 0 membawa kita ke awal kisah kengerian di Pegunungan Arklay. Ikuti perjalanan Rebecca Chambers, anggota termuda S.T.A.R.S. Bravo Team, saat ia menemukan rahasia kelam di balik Umbrella Corporation.</p>
+      <p>Resident Evil 2 membawa kita ke dalam mimpi buruk di Raccoon City. Dua tokoh — Leon S. Kennedy, polisi pemula di hari pertamanya bertugas, dan Claire Redfield, kakak dari Chris Redfield — berjuang melawan kengerian yang diciptakan oleh virus T hasil eksperimen Umbrella Corporation.</p>
     </div>
 
     <div id="page-2" class="page-content hidden">
       <h2>Daftar Isi</h2>
       <ul>
-        <li>Bab 1 — Malam di Pegunungan Arklay</li>
-        <li>Bab 2 — Pertemuan dengan Billy</li>
-        <li>Bab 3 — Bayangan di Hutan</li>
-        <li>Bab 4 — Rahasia Kereta Ecliptic Express</li>
-        <li>Bab 5 — Misteri Laboratorium Tersembunyi</li>
-        <li>Bab 6 — Kebangkitan Lintah Ratu</li>
-        <li>Bab 7 — Konspirasi Umbrella</li>
-        <li>Bab 8 — Pertarungan Terakhir</li>
-        <li>Bab 9 — Awal dari Segalanya</li>
-        <li>Halaman 10 — Galeri Resident Evil 0</li>
+        <li>Bab 1 — Kota yang Terinfeksi</li>
+        <li>Bab 2 — Pertemuan di Tengah Neraka</li>
+        <li>Bab 3 — Menuju Kantor Polisi Raccoon</li>
+        <li>Bab 4 — Rahasia di Balik R.P.D</li>
+        <li>Bab 5 — Teror di Bawah Tanah</li>
+        <li>Bab 6 — Eksperimen yang Gagal</li>
+        <li>Bab 7 — William Birkin dan Virus G</li>
+        <li>Bab 8 — Pelarian dari Neraka</li>
+        <li>Bab 9 — Akhir dan Awal Baru</li>
+        <li>Halaman 10 — Galeri Resident Evil 2</li>
       </ul>
     </div>
 
     <div id="page-3" class="page-content hidden">
-      <h2>Bab 1: Malam di Pegunungan Arklay</h2>
-      <p>Bravo Team dikirim untuk menyelidiki serangkaian pembunuhan aneh. Rebecca Chambers, meski masih muda dan kurang pengalaman, ikut serta. Malam itu, mereka menemukan kereta misterius bernama Ecliptic Express yang berhenti di tengah hutan. Ketika naik ke dalam, Rebecca mendapati pemandangan mengerikan: mayat hidup memenuhi kereta...</p>
-      <div class="image-right"><img src="re0-kereta.jpg" alt="Ecliptic Express"></div>
+      <h2>Bab 1: Kota yang Terinfeksi</h2>
+      <p>Raccoon City telah jatuh ke dalam kekacauan. Wabah misterius membuat warganya berubah menjadi zombie. Leon S. Kennedy yang baru tiba di kota itu, segera mendapati bahwa tempat tugas pertamanya berubah menjadi medan pertempuran hidup dan mati.</p>
+      <div class="image-right"><img src="re2-city.jpg" alt="Raccoon City"></div>
     </div>
 
     <div id="page-4" class="page-content hidden">
-      <h2>Bab 2: Pertemuan dengan Billy</h2>
-      <p>Rebecca bertemu dengan Billy Coen, seorang mantan marinir sekaligus narapidana yang sedang dikawal sebelum kereta itu diserang. Awalnya Rebecca ragu, namun keadaan memaksa mereka bekerja sama untuk bertahan hidup. Hubungan yang penuh ketegangan mulai tumbuh menjadi kerja sama yang tak terduga.</p>
+      <h2>Bab 2: Pertemuan di Tengah Neraka</h2>
+      <p>Leon bertemu Claire Redfield di tengah kekacauan. Bersama, mereka mencoba mencari jalan keluar dari kota. Namun, mereka berpisah setelah truk bahan bakar meledak, memaksa keduanya bertahan sendiri dengan rute yang berbeda.</p>
     </div>
 
     <div id="page-5" class="page-content hidden">
-      <h2>Bab 3: Bayangan di Hutan</h2>
-      <p>Kereta yang mereka naiki akhirnya tergelincir dan hancur di hutan. Rebecca dan Billy berjalan menembus pepohonan gelap, menghadapi anjing zombie dan makhluk hasil eksperimen Umbrella. Perlahan, keduanya menyadari bahwa ada sesuatu yang lebih besar mengintai mereka.</p>
-      <div class="image-center"><img src="re0-hutan.jpg" alt="Hutan Resident Evil 0"></div>
+      <h2>Bab 3: Menuju Kantor Polisi Raccoon</h2>
+      <p>Leon tiba di kantor polisi R.P.D. yang ternyata sudah dipenuhi zombie. Di sana ia menemukan pesan terakhir dari anggota S.T.A.R.S., mengungkapkan kebenaran tentang eksperimen Umbrella yang gagal.</p>
+      <div class="image-center"><img src="re2-rpd.jpg" alt="RPD Station"></div>
     </div>
 
     <div id="page-6" class="page-content hidden">
-      <h2>Bab 4: Rahasia Kereta Ecliptic Express</h2>
-      <p>Rebecca mengetahui bahwa kereta itu adalah bagian dari eksperimen rahasia Umbrella. Catatan-catatan yang ditemukan menunjukkan percobaan terhadap lintah yang dimodifikasi, menciptakan makhluk yang haus darah. Seorang pria misterius dengan mantel panjang, James Marcus, tampaknya menjadi dalang di balik semuanya.</p>
+      <h2>Bab 4: Rahasia di Balik R.P.D</h2>
+      <p>Claire bertemu seorang anak kecil bernama Sherry Birkin yang dikejar makhluk menakutkan. Sementara Leon bertemu wanita misterius bernama Ada Wong yang mengaku mencari seseorang dari Umbrella. Perlahan, rahasia kegelapan di kantor polisi mulai terkuak.</p>
     </div>
 
     <div id="page-7" class="page-content hidden">
-      <h2>Bab 5: Misteri Laboratorium Tersembunyi</h2>
-      <p>Di dalam laboratorium tersembunyi, Rebecca dan Billy menemukan bukti kekejaman Umbrella: penelitian biologis yang tidak manusiawi. Mereka harus melawan monster-mutasi mengerikan, termasuk seekor kelelawar raksasa yang menguasai ruang penelitian.</p>
-      <div class="image-center"><img src="re0-lab.jpg" alt="Laboratorium Resident Evil 0"></div>
+      <h2>Bab 5: Teror di Bawah Tanah</h2>
+      <p>Keduanya menemukan jalur menuju fasilitas bawah tanah yang digunakan Umbrella untuk eksperimen. Di sana, mereka menghadapi monster ganas dan jebakan mematikan. Suasana semakin mencekam ketika mereka bertemu dengan makhluk yang dulunya manusia.</p>
+      <div class="image-center"><img src="re2-sewer.jpg" alt="Saluran bawah tanah"></div>
     </div>
 
     <div id="page-8" class="page-content hidden">
-      <h2>Bab 6: Kebangkitan Lintah Ratu</h2>
-      <p>Lintah-lintah eksperimen bersatu membentuk makhluk menjijikkan yang dikenal sebagai Lintah Ratu. Sosok itu adalah manifestasi dari kebencian James Marcus terhadap Umbrella. Pertarungan menjadi semakin sulit, Rebecca dan Billy hanya bisa bertahan dengan saling melindungi.</p>
+      <h2>Bab 6: Eksperimen yang Gagal</h2>
+      <p>Umbrella telah menciptakan virus baru bernama G-Virus. Peneliti utamanya, Dr. William Birkin, berubah menjadi monster setelah menyuntikkan virus itu ke dirinya sendiri untuk melindunginya dari agen Umbrella. Kini, ia menjadi ancaman terbesar di fasilitas itu.</p>
     </div>
 
     <div id="page-9" class="page-content hidden">
-      <h2>Bab 7: Konspirasi Umbrella</h2>
-      <p>Kebenaran semakin jelas: Umbrella bukan sekadar perusahaan farmasi, melainkan dalang di balik terciptanya virus mematikan. Rebecca menyadari bahwa Bravo Team hanyalah pion dalam permainan besar yang jauh lebih berbahaya dari yang ia bayangkan.</p>
+      <h2>Bab 7: William Birkin dan Virus G</h2>
+      <p>William Birkin menjadi sosok monster yang terus berevolusi. Ia mengejar Sherry, anaknya sendiri, untuk menjadikannya inang virus G. Leon dan Claire bekerja sama untuk menghentikannya, meski hampir kehilangan nyawa mereka.</p>
+      <div class="image-right"><img src="re2-birkin.jpg" alt="William Birkin"></div>
     </div>
 
     <div id="page-10" class="page-content hidden">
-      <h2>Bab 8: Pertarungan Terakhir</h2>
-      <p>Di ruang bawah tanah fasilitas Umbrella, Rebecca dan Billy menghadapi Lintah Ratu dalam wujud raksasa. Dengan sisa tenaga terakhir, mereka menghancurkan makhluk itu. Namun, kebakaran yang melanda laboratorium memaksa mereka untuk segera melarikan diri.</p>
-      <div class="image-right"><img src="re0-boss.jpg" alt="Pertarungan Lintah Ratu"></div>
+      <h2>Bab 8: Pelarian dari Neraka</h2>
+      <p>Setelah mengalahkan Birkin, mereka berlari menuju kereta bawah tanah untuk melarikan diri. Namun, makhluk itu belum benar-benar mati. Dalam pertarungan terakhir, Leon dan Claire menghancurkannya sekali lagi sebelum fasilitas meledak.</p>
+      <div class="image-center"><img src="re2-train.jpg" alt="Kereta Pelarian"></div>
     </div>
 
     <div id="page-11" class="page-content hidden">
-      <h2>Bab 9: Awal dari Segalanya</h2>
-      <p>Rebecca melepaskan Billy, meski tahu ia akan tetap menjadi buronan. Mereka berpisah dengan saling menghormati. Rebecca kemudian menuju ke mansion Spencer, tempat Bravo Team lainnya berada... sebuah awal dari kengerian baru yang akan tercatat dalam sejarah sebagai Insiden Spencer Mansion.</p>
+      <h2>Bab 9: Akhir dan Awal Baru</h2>
+      <p>Leon, Claire, dan Sherry berhasil keluar dari reruntuhan. Kota Raccoon kini hancur dan ditelan api. Meski mereka selamat, perang melawan Umbrella baru saja dimulai. Kisah mereka akan berlanjut dalam perjuangan melawan kejahatan yang lebih besar.</p>
     </div>
 
     <div id="page-12" class="page-content hidden">
-      <h2>Galeri Resident Evil 0</h2>
-      <div class="image-center"><img src="re0-gallery1.jpg" alt="Rebecca Chambers"></div>
-      <div class="image-center"><img src="re0-gallery2.jpg" alt="Billy Coen"></div>
-      <div class="image-center"><img src="re0-gallery3.jpg" alt="Ecliptic Express"></div>
+      <h2>Galeri Resident Evil 2</h2>
+      <div class="image-center"><img src="re2-leon.jpg" alt="Leon S. Kennedy"></div>
+      <div class="image-center"><img src="re2-claire.jpg" alt="Claire Redfield"></div>
+      <div class="image-center"><img src="re2-sherry.jpg" alt="Sherry Birkin"></div>
     </div>
 
     <!-- Footer -->

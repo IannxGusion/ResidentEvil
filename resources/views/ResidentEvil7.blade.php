@@ -1,10 +1,10 @@
-{{-- resources/views/residentevil0.blade.php --}}
+{{-- resources/views/residentevil7.blade.php --}}
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resident Evil 0 — Buku Cerita</title>
+  <title>Resident Evil 7 — Buku Cerita</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Merriweather&display=swap" rel="stylesheet">
   <style>
     body {
@@ -121,81 +121,79 @@
 
     <!-- Halaman -->
     <div id="page-1" class="page-content">
-      <h1>Resident Evil 0</h1>
+      <h1>Resident Evil 7: Biohazard</h1>
       <h3>Kata Pengantar</h3>
-      <p>Resident Evil 0 membawa kita ke awal kisah kengerian di Pegunungan Arklay. Ikuti perjalanan Rebecca Chambers, anggota termuda S.T.A.R.S. Bravo Team, saat ia menemukan rahasia kelam di balik Umbrella Corporation.</p>
+      <p>Setelah kengerian Raccoon City, dunia tampak tenang — hingga seorang pria bernama Ethan Winters menerima pesan dari istrinya yang telah lama hilang. Pesan itu membawanya ke rumah keluarga Baker, di pedalaman Louisiana... tempat mimpi buruk baru dimulai.</p>
+      <div class="image-center"><img src="re7-house.jpg" alt="Rumah Baker"></div>
     </div>
 
     <div id="page-2" class="page-content hidden">
       <h2>Daftar Isi</h2>
       <ul>
-        <li>Bab 1 — Malam di Pegunungan Arklay</li>
-        <li>Bab 2 — Pertemuan dengan Billy</li>
-        <li>Bab 3 — Bayangan di Hutan</li>
-        <li>Bab 4 — Rahasia Kereta Ecliptic Express</li>
-        <li>Bab 5 — Misteri Laboratorium Tersembunyi</li>
-        <li>Bab 6 — Kebangkitan Lintah Ratu</li>
-        <li>Bab 7 — Konspirasi Umbrella</li>
-        <li>Bab 8 — Pertarungan Terakhir</li>
-        <li>Bab 9 — Awal dari Segalanya</li>
-        <li>Halaman 10 — Galeri Resident Evil 0</li>
+        <li>Bab 1 — Pesan dari Masa Lalu</li>
+        <li>Bab 2 — Rumah Baker</li>
+        <li>Bab 3 — Jack yang Tak Mati</li>
+        <li>Bab 4 — Rahasia di Ruang Bawah Tanah</li>
+        <li>Bab 5 — Pertarungan di Rumah Lama</li>
+        <li>Bab 6 — Evelyn, Anak Misterius</li>
+        <li>Bab 7 — Kebangkitan Ethan</li>
+        <li>Bab 8 — Akhir dari Mimpi Buruk</li>
+        <li>Bab 9 — Galeri Biohazard</li>
       </ul>
     </div>
 
     <div id="page-3" class="page-content hidden">
-      <h2>Bab 1: Malam di Pegunungan Arklay</h2>
-      <p>Bravo Team dikirim untuk menyelidiki serangkaian pembunuhan aneh. Rebecca Chambers, meski masih muda dan kurang pengalaman, ikut serta. Malam itu, mereka menemukan kereta misterius bernama Ecliptic Express yang berhenti di tengah hutan. Ketika naik ke dalam, Rebecca mendapati pemandangan mengerikan: mayat hidup memenuhi kereta...</p>
-      <div class="image-right"><img src="re0-kereta.jpg" alt="Ecliptic Express"></div>
+      <h2>Bab 1: Pesan dari Masa Lalu</h2>
+      <p>Ethan menerima video dari istrinya, Mia, yang telah dinyatakan hilang tiga tahun lalu. Dalam video itu, Mia tampak ketakutan dan memohon agar Ethan tidak mencarinya. Namun cinta membutakan, dan ia memutuskan untuk pergi ke Louisiana demi menjemputnya.</p>
+      <div class="image-right"><img src="re7-video.jpg" alt="Pesan dari Mia"></div>
     </div>
 
     <div id="page-4" class="page-content hidden">
-      <h2>Bab 2: Pertemuan dengan Billy</h2>
-      <p>Rebecca bertemu dengan Billy Coen, seorang mantan marinir sekaligus narapidana yang sedang dikawal sebelum kereta itu diserang. Awalnya Rebecca ragu, namun keadaan memaksa mereka bekerja sama untuk bertahan hidup. Hubungan yang penuh ketegangan mulai tumbuh menjadi kerja sama yang tak terduga.</p>
+      <h2>Bab 2: Rumah Baker</h2>
+      <p>Rumah keluarga Baker tampak tua dan sepi, namun bau busuk daging membusuk memenuhi udara. Ethan menemukan Mia, tapi sesuatu telah berubah dalam dirinya. Dalam sekejap, wanita yang ia cintai menyerangnya dengan brutal.</p>
+      <div class="image-center"><img src="re7-mia.jpg" alt="Mia menyerang Ethan"></div>
     </div>
 
     <div id="page-5" class="page-content hidden">
-      <h2>Bab 3: Bayangan di Hutan</h2>
-      <p>Kereta yang mereka naiki akhirnya tergelincir dan hancur di hutan. Rebecca dan Billy berjalan menembus pepohonan gelap, menghadapi anjing zombie dan makhluk hasil eksperimen Umbrella. Perlahan, keduanya menyadari bahwa ada sesuatu yang lebih besar mengintai mereka.</p>
-      <div class="image-center"><img src="re0-hutan.jpg" alt="Hutan Resident Evil 0"></div>
+      <h2>Bab 3: Jack yang Tak Mati</h2>
+      <p>Jack Baker, kepala keluarga yang gila, memburu Ethan tanpa henti. Tak peduli berapa kali ia ditembak atau dihancurkan, Jack selalu bangkit kembali. Pertarungan mereka di garasi menjadi salah satu momen paling menegangkan yang pernah Ethan alami.</p>
+      <div class="image-right"><img src="re7-jack.jpg" alt="Jack Baker"></div>
     </div>
 
     <div id="page-6" class="page-content hidden">
-      <h2>Bab 4: Rahasia Kereta Ecliptic Express</h2>
-      <p>Rebecca mengetahui bahwa kereta itu adalah bagian dari eksperimen rahasia Umbrella. Catatan-catatan yang ditemukan menunjukkan percobaan terhadap lintah yang dimodifikasi, menciptakan makhluk yang haus darah. Seorang pria misterius dengan mantel panjang, James Marcus, tampaknya menjadi dalang di balik semuanya.</p>
+      <h2>Bab 4: Rahasia di Ruang Bawah Tanah</h2>
+      <p>Di bawah rumah Baker, Ethan menemukan laboratorium tersembunyi. Dari catatan lama, ia mengetahui bahwa keluarga itu terinfeksi oleh senjata biologis bernama “Eveline” — seorang anak buatan yang mampu mengendalikan orang lain dengan infeksi jamur.</p>
+      <div class="image-center"><img src="re7-lab.jpg" alt="Laboratorium"></div>
     </div>
 
     <div id="page-7" class="page-content hidden">
-      <h2>Bab 5: Misteri Laboratorium Tersembunyi</h2>
-      <p>Di dalam laboratorium tersembunyi, Rebecca dan Billy menemukan bukti kekejaman Umbrella: penelitian biologis yang tidak manusiawi. Mereka harus melawan monster-mutasi mengerikan, termasuk seekor kelelawar raksasa yang menguasai ruang penelitian.</p>
-      <div class="image-center"><img src="re0-lab.jpg" alt="Laboratorium Resident Evil 0"></div>
+      <h2>Bab 5: Pertarungan di Rumah Lama</h2>
+      <p>Ethan berhadapan dengan Marguerite Baker dan kawanan serangga mutan di rumah lama. Di tengah kekacauan, ia menemukan serum yang dapat menyembuhkan infeksi. Namun keputusan siapa yang harus diselamatkan — Mia atau Zoe — menjadi dilema moral yang berat.</p>
+      <div class="image-center"><img src="re7-marguerite.jpg" alt="Marguerite Baker"></div>
     </div>
 
     <div id="page-8" class="page-content hidden">
-      <h2>Bab 6: Kebangkitan Lintah Ratu</h2>
-      <p>Lintah-lintah eksperimen bersatu membentuk makhluk menjijikkan yang dikenal sebagai Lintah Ratu. Sosok itu adalah manifestasi dari kebencian James Marcus terhadap Umbrella. Pertarungan menjadi semakin sulit, Rebecca dan Billy hanya bisa bertahan dengan saling melindungi.</p>
+      <h2>Bab 6: Evelyn, Anak Misterius</h2>
+      <p>Eveline bukan manusia biasa. Ia adalah hasil eksperimen Umbrella yang gagal, dengan kemampuan mengontrol manusia lewat spora jamur. Obsesinya menciptakan “keluarga” membuatnya menjadi ancaman mematikan bagi siapa pun di dekatnya.</p>
     </div>
 
     <div id="page-9" class="page-content hidden">
-      <h2>Bab 7: Konspirasi Umbrella</h2>
-      <p>Kebenaran semakin jelas: Umbrella bukan sekadar perusahaan farmasi, melainkan dalang di balik terciptanya virus mematikan. Rebecca menyadari bahwa Bravo Team hanyalah pion dalam permainan besar yang jauh lebih berbahaya dari yang ia bayangkan.</p>
+      <h2>Bab 7: Kebangkitan Ethan</h2>
+      <p>Setelah hampir mati, Ethan terbangun di laboratorium Umbrella. Dengan bantuan Chris Redfield, ia mengetahui bahwa perusahaan itu kini mencoba memperbaiki kesalahan masa lalu. Bersama-sama, mereka menghadapi bentuk akhir mutasi Eveline.</p>
+      <div class="image-center"><img src="re7-chris.jpg" alt="Chris Redfield"></div>
     </div>
 
     <div id="page-10" class="page-content hidden">
-      <h2>Bab 8: Pertarungan Terakhir</h2>
-      <p>Di ruang bawah tanah fasilitas Umbrella, Rebecca dan Billy menghadapi Lintah Ratu dalam wujud raksasa. Dengan sisa tenaga terakhir, mereka menghancurkan makhluk itu. Namun, kebakaran yang melanda laboratorium memaksa mereka untuk segera melarikan diri.</p>
-      <div class="image-right"><img src="re0-boss.jpg" alt="Pertarungan Lintah Ratu"></div>
+      <h2>Bab 8: Akhir dari Mimpi Buruk</h2>
+      <p>Dengan senjata khusus yang diberikan Chris, Ethan akhirnya menghancurkan Eveline. Mia selamat, dan untuk pertama kalinya dalam bertahun-tahun, keduanya dapat menghirup udara bebas. Namun, luka batin dari rumah Baker akan selamanya membekas di hati mereka.</p>
+      <div class="image-center"><img src="re7-end.jpg" alt="Akhir Resident Evil 7"></div>
     </div>
 
     <div id="page-11" class="page-content hidden">
-      <h2>Bab 9: Awal dari Segalanya</h2>
-      <p>Rebecca melepaskan Billy, meski tahu ia akan tetap menjadi buronan. Mereka berpisah dengan saling menghormati. Rebecca kemudian menuju ke mansion Spencer, tempat Bravo Team lainnya berada... sebuah awal dari kengerian baru yang akan tercatat dalam sejarah sebagai Insiden Spencer Mansion.</p>
-    </div>
-
-    <div id="page-12" class="page-content hidden">
-      <h2>Galeri Resident Evil 0</h2>
-      <div class="image-center"><img src="re0-gallery1.jpg" alt="Rebecca Chambers"></div>
-      <div class="image-center"><img src="re0-gallery2.jpg" alt="Billy Coen"></div>
-      <div class="image-center"><img src="re0-gallery3.jpg" alt="Ecliptic Express"></div>
+      <h2>Galeri Biohazard</h2>
+      <div class="image-center"><img src="re7-gallery1.jpg" alt="Rumah Baker"></div>
+      <div class="image-center"><img src="re7-gallery2.jpg" alt="Ethan dan Mia"></div>
+      <div class="image-center"><img src="re7-gallery3.jpg" alt="Eveline"></div>
     </div>
 
     <!-- Footer -->
@@ -210,7 +208,7 @@
 
   <script>
     let currentPage = 1;
-    const totalPages = 12;
+    const totalPages = 11;
 
     function showPage(page) {
       for (let i = 1; i <= totalPages; i++) {

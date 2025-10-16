@@ -1,16 +1,16 @@
-{{-- resources/views/residentevil0.blade.php --}}
+{{-- resources/views/residentevil5.blade.php --}}
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resident Evil 0 — Buku Cerita</title>
+  <title>Resident Evil 5 — Buku Cerita</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Merriweather&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Merriweather', serif;
-      background: #d6c6a8;
+      background: #e5d3b3;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -28,16 +28,16 @@
       width: 90%;
       max-width: 900px;
       height: 90vh;
-      background: #fdf6e3;
+      background: #faf4e0;
       box-shadow: 0 0 30px rgba(0,0,0,0.4);
       border-radius: 8px;
       position: relative;
       padding: 40px;
-      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       transition: background 0.3s, color 0.3s;
     }
+
     body.dark .book {
       background: #2a2a2a;
       color: #f0e6d2;
@@ -59,7 +59,6 @@
 
     h1 { text-align: center; font-size: 2rem; }
     h2 { margin-top: 25px; border-left: 4px solid #c19a6b; padding-left: 10px; }
-
     p { text-align: justify; line-height: 1.7; margin: 15px 0; }
 
     .footer {
@@ -121,81 +120,83 @@
 
     <!-- Halaman -->
     <div id="page-1" class="page-content">
-      <h1>Resident Evil 0</h1>
+      <h1>Resident Evil 5</h1>
       <h3>Kata Pengantar</h3>
-      <p>Resident Evil 0 membawa kita ke awal kisah kengerian di Pegunungan Arklay. Ikuti perjalanan Rebecca Chambers, anggota termuda S.T.A.R.S. Bravo Team, saat ia menemukan rahasia kelam di balik Umbrella Corporation.</p>
+      <p>Resident Evil 5 membawa Chris Redfield ke jantung Afrika, tempat wabah biologis baru mengancam dunia. Bersama Sheva Alomar, ia menghadapi kegelapan baru di bawah bayang-bayang Umbrella dan masa lalunya sendiri.</p>
     </div>
 
     <div id="page-2" class="page-content hidden">
       <h2>Daftar Isi</h2>
       <ul>
-        <li>Bab 1 — Malam di Pegunungan Arklay</li>
-        <li>Bab 2 — Pertemuan dengan Billy</li>
-        <li>Bab 3 — Bayangan di Hutan</li>
-        <li>Bab 4 — Rahasia Kereta Ecliptic Express</li>
-        <li>Bab 5 — Misteri Laboratorium Tersembunyi</li>
-        <li>Bab 6 — Kebangkitan Lintah Ratu</li>
-        <li>Bab 7 — Konspirasi Umbrella</li>
-        <li>Bab 8 — Pertarungan Terakhir</li>
-        <li>Bab 9 — Awal dari Segalanya</li>
-        <li>Halaman 10 — Galeri Resident Evil 0</li>
+        <li>Bab 1 — Misi ke Kijuju</li>
+        <li>Bab 2 — Sheva Alomar</li>
+        <li>Bab 3 — Kengerian di Pasar</li>
+        <li>Bab 4 — Kembali ke Masa Lalu</li>
+        <li>Bab 5 — Misteri Tricell</li>
+        <li>Bab 6 — Eksperimen Uroboros</li>
+        <li>Bab 7 — Pertarungan Melawan Jill</li>
+        <li>Bab 8 — Chris vs Wesker</li>
+        <li>Bab 9 — Akhir Umbrella</li>
+        <li>Halaman 10 — Galeri Resident Evil 5</li>
       </ul>
     </div>
 
     <div id="page-3" class="page-content hidden">
-      <h2>Bab 1: Malam di Pegunungan Arklay</h2>
-      <p>Bravo Team dikirim untuk menyelidiki serangkaian pembunuhan aneh. Rebecca Chambers, meski masih muda dan kurang pengalaman, ikut serta. Malam itu, mereka menemukan kereta misterius bernama Ecliptic Express yang berhenti di tengah hutan. Ketika naik ke dalam, Rebecca mendapati pemandangan mengerikan: mayat hidup memenuhi kereta...</p>
-      <div class="image-right"><img src="re0-kereta.jpg" alt="Ecliptic Express"></div>
+      <h2>Bab 1: Misi ke Kijuju</h2>
+      <p>Chris Redfield dikirim ke kota Kijuju di Afrika bersama agen lokal Sheva Alomar. Mereka bertugas menghentikan perdagangan senjata biologis. Namun, mereka segera mendapati bahwa penduduk setempat telah berubah menjadi makhluk buas akibat infeksi virus baru.</p>
+      <div class="image-center"><img src="re5-kijuju.jpg" alt="Kijuju Market"></div>
     </div>
 
     <div id="page-4" class="page-content hidden">
-      <h2>Bab 2: Pertemuan dengan Billy</h2>
-      <p>Rebecca bertemu dengan Billy Coen, seorang mantan marinir sekaligus narapidana yang sedang dikawal sebelum kereta itu diserang. Awalnya Rebecca ragu, namun keadaan memaksa mereka bekerja sama untuk bertahan hidup. Hubungan yang penuh ketegangan mulai tumbuh menjadi kerja sama yang tak terduga.</p>
+      <h2>Bab 2: Sheva Alomar</h2>
+      <p>Sheva adalah anggota BSAA yang memiliki tekad kuat untuk melindungi negerinya. Hubungannya dengan Chris semakin erat, meski mereka berasal dari dunia yang berbeda. Sheva menjadi lambang harapan dan kemanusiaan di tengah kekacauan.</p>
+      <div class="image-right"><img src="re5-sheva.jpg" alt="Sheva Alomar"></div>
     </div>
 
     <div id="page-5" class="page-content hidden">
-      <h2>Bab 3: Bayangan di Hutan</h2>
-      <p>Kereta yang mereka naiki akhirnya tergelincir dan hancur di hutan. Rebecca dan Billy berjalan menembus pepohonan gelap, menghadapi anjing zombie dan makhluk hasil eksperimen Umbrella. Perlahan, keduanya menyadari bahwa ada sesuatu yang lebih besar mengintai mereka.</p>
-      <div class="image-center"><img src="re0-hutan.jpg" alt="Hutan Resident Evil 0"></div>
+      <h2>Bab 3: Kengerian di Pasar</h2>
+      <p>Pasar yang ramai berubah menjadi arena pembantaian. Para Majini menyerang dari segala arah. Chris dan Sheva harus bertahan melawan gelombang makhluk yang tak kenal takut, termasuk eksekutor raksasa bersenjatakan palu.</p>
+      <div class="image-center"><img src="re5-majini.jpg" alt="Pertarungan di Kijuju"></div>
     </div>
 
     <div id="page-6" class="page-content hidden">
-      <h2>Bab 4: Rahasia Kereta Ecliptic Express</h2>
-      <p>Rebecca mengetahui bahwa kereta itu adalah bagian dari eksperimen rahasia Umbrella. Catatan-catatan yang ditemukan menunjukkan percobaan terhadap lintah yang dimodifikasi, menciptakan makhluk yang haus darah. Seorang pria misterius dengan mantel panjang, James Marcus, tampaknya menjadi dalang di balik semuanya.</p>
+      <h2>Bab 4: Kembali ke Masa Lalu</h2>
+      <p>Chris dihantui oleh kenangan Jill Valentine yang dianggap telah tewas. Saat menemukan petunjuk bahwa Jill masih hidup, tekadnya semakin membara. Perjalanan ini bukan sekadar misi — ini adalah penebusan masa lalu.</p>
     </div>
 
     <div id="page-7" class="page-content hidden">
-      <h2>Bab 5: Misteri Laboratorium Tersembunyi</h2>
-      <p>Di dalam laboratorium tersembunyi, Rebecca dan Billy menemukan bukti kekejaman Umbrella: penelitian biologis yang tidak manusiawi. Mereka harus melawan monster-mutasi mengerikan, termasuk seekor kelelawar raksasa yang menguasai ruang penelitian.</p>
-      <div class="image-center"><img src="re0-lab.jpg" alt="Laboratorium Resident Evil 0"></div>
+      <h2>Bab 5: Misteri Tricell</h2>
+      <p>Tricell, perusahaan farmasi baru, ternyata melanjutkan warisan kelam Umbrella. Eksperimen dengan virus Uroboros menciptakan mutasi baru yang lebih berbahaya. Dunia berada di ambang kehancuran.</p>
+      <div class="image-center"><img src="re5-tricell.jpg" alt="Laboratorium Tricell"></div>
     </div>
 
     <div id="page-8" class="page-content hidden">
-      <h2>Bab 6: Kebangkitan Lintah Ratu</h2>
-      <p>Lintah-lintah eksperimen bersatu membentuk makhluk menjijikkan yang dikenal sebagai Lintah Ratu. Sosok itu adalah manifestasi dari kebencian James Marcus terhadap Umbrella. Pertarungan menjadi semakin sulit, Rebecca dan Billy hanya bisa bertahan dengan saling melindungi.</p>
+      <h2>Bab 6: Eksperimen Uroboros</h2>
+      <p>Chris dan Sheva menemukan laboratorium bawah tanah tempat virus Uroboros dikembangkan. Monster hitam raksasa lahir dari kegelapan. Mereka bertarung mati-matian untuk menghentikan penyebaran virus mematikan ini.</p>
     </div>
 
     <div id="page-9" class="page-content hidden">
-      <h2>Bab 7: Konspirasi Umbrella</h2>
-      <p>Kebenaran semakin jelas: Umbrella bukan sekadar perusahaan farmasi, melainkan dalang di balik terciptanya virus mematikan. Rebecca menyadari bahwa Bravo Team hanyalah pion dalam permainan besar yang jauh lebih berbahaya dari yang ia bayangkan.</p>
+      <h2>Bab 7: Pertarungan Melawan Jill</h2>
+      <p>Chris menemukan Jill masih hidup — tapi dikendalikan oleh perangkat Tricell. Dalam duel emosional, Chris berhasil menyelamatkannya, membebaskan Jill dari kendali Wesker. Tangis dan pelukan menghapus luka lama di antara mereka.</p>
+      <div class="image-right"><img src="re5-jill.jpg" alt="Pertarungan Jill Valentine"></div>
     </div>
 
     <div id="page-10" class="page-content hidden">
-      <h2>Bab 8: Pertarungan Terakhir</h2>
-      <p>Di ruang bawah tanah fasilitas Umbrella, Rebecca dan Billy menghadapi Lintah Ratu dalam wujud raksasa. Dengan sisa tenaga terakhir, mereka menghancurkan makhluk itu. Namun, kebakaran yang melanda laboratorium memaksa mereka untuk segera melarikan diri.</p>
-      <div class="image-right"><img src="re0-boss.jpg" alt="Pertarungan Lintah Ratu"></div>
+      <h2>Bab 8: Chris vs Wesker</h2>
+      <p>Wesker, mantan sahabat sekaligus musuh lamanya, kini menjadi monster akibat virus Uroboros. Pertarungan epik di dalam pesawat menjadi klimaks pertempuran dua legenda. Dengan kerja sama Sheva, Chris akhirnya menumbangkan Wesker.</p>
+      <div class="image-center"><img src="re5-wesker.jpg" alt="Chris vs Wesker"></div>
     </div>
 
     <div id="page-11" class="page-content hidden">
-      <h2>Bab 9: Awal dari Segalanya</h2>
-      <p>Rebecca melepaskan Billy, meski tahu ia akan tetap menjadi buronan. Mereka berpisah dengan saling menghormati. Rebecca kemudian menuju ke mansion Spencer, tempat Bravo Team lainnya berada... sebuah awal dari kengerian baru yang akan tercatat dalam sejarah sebagai Insiden Spencer Mansion.</p>
+      <h2>Bab 9: Akhir Umbrella</h2>
+      <p>Umbrella mungkin telah runtuh, tapi warisannya tetap menghantui dunia. Chris dan Sheva menatap matahari terbit di atas Afrika — simbol awal baru setelah kegelapan panjang. Dunia masih belum aman, tapi harapan belum padam.</p>
     </div>
 
     <div id="page-12" class="page-content hidden">
-      <h2>Galeri Resident Evil 0</h2>
-      <div class="image-center"><img src="re0-gallery1.jpg" alt="Rebecca Chambers"></div>
-      <div class="image-center"><img src="re0-gallery2.jpg" alt="Billy Coen"></div>
-      <div class="image-center"><img src="re0-gallery3.jpg" alt="Ecliptic Express"></div>
+      <h2>Galeri Resident Evil 5</h2>
+      <div class="image-center"><img src="re5-gallery1.jpg" alt="Chris Redfield"></div>
+      <div class="image-center"><img src="re5-gallery2.jpg" alt="Sheva Alomar"></div>
+      <div class="image-center"><img src="re5-gallery3.jpg" alt="Albert Wesker"></div>
     </div>
 
     <!-- Footer -->
